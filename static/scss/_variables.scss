@@ -1,0 +1,47 @@
+// Variables
+
+// Colors
+$page-bgcolor: #000;
+$header-bg-color: #780C28;
+$header-text-color: #EAD196;
+$side-menu-bg-color: #333;
+
+$text-color: #fff;
+$text-hover-color: #F3C623;
+
+$cards-bg-color: #FAF8F1;
+
+$footer-bgcolor: #EAD196;
+$footer-text-color: #000;
+// $hr-color: #FAF8F1;
+
+// Fonts
+$main-font: "Raleway", sans-serif;
+$dance-font: "Dancing Script", cursive;
+$name-font: "Roboto Slab", serif;
+
+// Images
+$main-banner-img: url("/static/img/index/main-banner.webp");
+
+$skills-banner-img: url("/static/img/skills/skills_banner.webp");
+$skills-bg-img: url("/static/img/skills/bg.jpg");
+
+$experiences-banner-img: url("/static/img/experiences/experiences-banner.webp");
+$experiences-bg-img: url("/static/img/experiences/bg.jpg");
+
+$contact-banner-img: url("");
+
+// Animation
+$icon-anim: 10s rotate-anim ease-in-out infinite;
+
+// Page's Title Style
+@mixin page-title-style{
+    padding: 40px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 30%);
+    background-blend-mode: multiply;
+    box-shadow: 2px 2px 100px #fff;
+    font-size: 75px;
+    text-align: center;
+    color: aqua;
+}

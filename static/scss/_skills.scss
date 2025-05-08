@@ -1,0 +1,22 @@
+@import "variables";
+
+.skills-banner{
+    padding: 200px 0;
+    background-image: $skills-banner-img;
+    background-position: center;
+    background-size: cover;
+
+    .banner-text{
+        h2{
+            @include page-title-style;
+        }
+    }  
+}
+
+.skills-sec{
+    background-image: $skills-bg-img;
+    background-color: rgba(0, 0, 0, 60%);
+    background-blend-mode: overlay;
+    background-position: center;
+    background-size: cover;
+}

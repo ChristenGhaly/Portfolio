@@ -1,0 +1,74 @@
+@import "variables";
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container{
+	width: 90%;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+// General CSS
+body{
+	background: $page-bgcolor;
+	font-family: $main-font;
+	overflow-x: hidden;
+	color: $text-color;
+}
+
+section{
+	padding: 130px 0;
+}
+
+ul{
+	list-style: none;
+}
+
+a{
+	display: inline-block;
+	text-decoration: none;
+	color: aqua;
+	transition: 0.5s;
+}
+
+button{
+	padding: 15px 30px;
+	border: 2px solid aqua;
+	border-radius: 10px;
+	background-color: #000;
+	font-size: 18px;
+	color: #000;
+
+	i{
+		margin-left: 10px;
+	}
+
+	&:hover{
+		border: 2px solid #000;
+		background-color: aqua;
+		a{
+			color: #000;
+		}
+	}
+}
+
+img{
+	max-width: 100%;
+	display: block;
+	height: 300px;
+}
+
+.icon-div{
+	background-position: center;
+	background-size: cover;
+	opacity: 40%;
+	height: 100px;
+	width: 100px;
+	z-index: 1;
+	animation: $icon-anim;
+	transition: 0.5s;
+}

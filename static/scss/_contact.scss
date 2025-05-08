@@ -1,0 +1,14 @@
+@import "variables";
+
+.contact-banner{
+    padding: 200px 0;
+    background-image: $contact-banner-img;
+    background-position: center;
+    background-size: cover;
+
+    .banner-text{
+        h2{
+            @include page-title-style;
+        }
+    }   
+}

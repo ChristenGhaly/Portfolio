@@ -1,0 +1,846 @@
+/*Chisten_Web Creation_Final Project_Ricardo*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family:  "Comme", sans-serif;
+	font-weight: 400;
+}
+
+h2{
+	font-weight: 500;
+}
+
+a{
+	text-decoration: none;
+	display: inline-block;
+	color: #fff;
+}
+
+.container{
+	width: 90%;
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*Header----------------------------*/
+.page-header{
+/*	background-color: #000;*/
+	padding: 10px 0;
+	color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transition: 1s;
+}
+
+.menu-flex{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 50px;
+}
+
+.menu-logo{
+	width: 55px;
+}
+
+.menu-logo img{
+	max-width: 100%;
+	display: block;
+	border-radius: 5px;
+}
+
+.burger-menu{
+	display: none;
+}
+
+.burger-menu i{
+	font-size: 30px;
+	border: 1px solid #fff;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.links{
+	list-style: none;
+	display: flex;
+	gap: 20px;
+	align-items: center;
+}
+
+.links a{
+	color: #C4E4FF;
+}
+
+.links a:hover{
+	color: #FFC470;
+	transition: 0.5s;
+}
+/*----------------------------------*/
+
+/*Main Banner Section---------------*/
+.main-banner{
+	background: url("https://www.potsandpans.in/cdn/shop/articles/Blog_banner_1_2048x.jpg?v=1643447595");
+	background-color: rgba(0, 0, 0, 50%);
+	background-size: cover;
+	background-position: center;
+	background-blend-mode: overlay;
+	padding: 150px;
+	text-align: left;
+}
+
+.main-banner h1{
+	color: #fff;
+	font-size: 90px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.main-banner h2{
+	color: #C4E4FF;
+	font-size: 70px;
+	font-weight: 400;
+}
+
+.main-banner p{
+	color: #C4E4FF;
+	font-size: 20px;
+	margin: 40px 0;
+	max-width: 500px;
+	line-height: 1.4;
+}
+
+.main-banner img{
+/*	background: url("https://uxwing.com/wp-content/themes/uxwing/download/arrow-direction/curved-arrow-right-to-bottom-blue-icon.png");*/
+	height: 25px;
+}
+
+/*.main-banner a:hover{
+	background: url("https://pic.onlinewebfonts.com/thumbnails/animations_76760.svg?width=2");
+	height: 30px;
+}*/
+/*----------------------------------*/
+
+/*About Section (Flex)--------------*/
+.about{
+	padding: 110px 0;
+	font-weight: 500;
+}
+
+.about-parent{
+	display: flex;
+	gap: 100px;
+	align-items: center;
+}
+
+.about-txt-child{
+	width: 50%;
+}
+
+.about-txt-child h2{
+	font-size: 60px;
+}
+
+.about-txt-child p{
+	margin: 30px 0;
+	font-size: 20px;
+	line-height: 1.3;
+}
+
+.about-txt-child ul{
+	list-style: none;
+	color: #1D24CA;
+	line-height: 2;
+	font-weight: 500;
+	margin-bottom: 23px;
+}
+
+.about ul img{
+	height: 12px;
+	margin-right: 10px;
+}
+
+.about-btn{
+	background-color: #000;
+	color: #fff;
+	border-radius: 25px;
+	padding: 12px 22px;
+}
+
+.about-btn:hover{
+	box-shadow: 3px 3px 10px gray;
+}
+
+.about-img-child{
+	width: 50%;
+	background-image: url("https://ucarecdn.com/b7174799-05ac-4b3c-a7e8-06b0a58f7460/-/preview/-/scale_crop/1400x580/-/quality/smart/-/format/auto/");
+	background-size: cover;
+	background-position: center;
+	height: 500px;
+	border-radius: 30px;
+}
+/*----------------------------------*/
+
+/*Call to action Banner-------------*/
+.call-action-banner{
+	background: url("https://www.marthastewart.com/thmb/fK-aLJMW_Pt11NRSDFX4erOCSGg=/1500x375/filters:no_upscale():max_bytes(200000):strip_icc()/dinner-recipes-banner-0323-b0d10d8e5b9d4ad09a4fef41d3c0078d.jpg");
+	background-color: rgba(0, 0, 0, 60%);
+	background-blend-mode: overlay;
+	background-size: cover;
+	background-position: center;
+	padding: 90px 0;
+	color: #fff;
+	text-align: center;
+}
+
+.call-action-banner h2{
+	font-size: 35px;
+}
+
+.call-action-banner h3{
+	margin: 20px 0 30px;
+}
+
+.call-action-banner a{
+	background-color: #fff;
+	color: #000;
+	border-radius: 25px;
+	padding: 12px 22px;
+}
+
+.call-action-banner a:hover{
+	font-weight: 600;
+	box-shadow: 2px 2px 5px #fff;
+}
+/*----------------------------------*/
+
+/*Lenders Section-------------------*/
+.services{
+	padding: 90px 0;
+}
+
+.lenders img{
+	height: 25px;
+	margin-right: 10px;
+}
+
+.lenders p:nth-of-type(1){
+	color: #c1272d;
+	font-size: 18px;
+/*	font-weight: 500;*/
+}
+
+.lenders h2{
+	font-size: 80px;
+	margin: 10px 0;
+}
+
+.lenders p:nth-of-type(2){
+	width: 350px;
+/*	font-weight: 500;*/
+	font-size: 20px;
+}
+
+.services-parent{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 50px;
+	padding: 70px 0;
+}
+
+.services-child img{
+	height: 40px;
+	margin-bottom: 20px;
+}
+
+.services-child h5{
+	font-size: 20px;
+/*	font-weight: 500;*/
+}
+
+.services-child p{
+	color: #454545;
+	line-height: 1.5;
+	margin-top: 15px;
+}
+/*----------------------------------*/
+
+/*Team Section----------------------*/
+.team{
+	padding: 30px 0 100px;
+}
+
+.team-parent-flex{
+	display: flex;
+	gap: 130px;
+}
+
+.team-title{
+	width: 50%;
+}
+
+.team-title img{
+	height: 18px;
+	margin-right: 10px;
+}
+
+.team-title p{
+	color: #c1272d;
+	margin-bottom: 10px;
+}
+
+.team-title h2{
+	font-size: 60px;
+}
+
+.team-parent-grid{
+	width: 50%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 30px;
+}
+
+.team-child-grid img:nth-of-type(1){
+	max-width: 100%;
+	border-radius: 20px;
+}
+
+.team-child-grid h5{
+	font-size: 18px;
+	font-weight: 500;
+	margin: 10px 0 6px;
+	text-transform: uppercase;
+}
+
+.team-child-grid p{
+	margin-bottom: 20px;
+}
+
+.team-child-grid img:nth-of-type(2){
+	height: 20px;
+	border-radius: 5px;
+}
+/*----------------------------------*/
+
+/*Footer Section--------------------*/
+.page-footer{
+	background: url("https://billygrant.com/wp-content/uploads/2019/10/billygrant-restaurants-b.png");
+	background-color: rgba(0, 0, 0, 40%);
+	background-blend-mode: overlay;
+	background-size: cover;
+	background-position: center;
+	padding: 70px 0;
+	text-align: center;
+	color: #C4E4FF;
+}
+
+footer .links{
+	justify-content: center;
+	gap: 50px;
+}
+
+footer i{
+	font-size: 25px;
+	padding: 5px;
+	border: 1px solid;
+	border-radius: 10px;
+}
+
+footer i:hover{
+	color: #fff;
+}
+
+footer .text{
+	font-size: 22px;
+	margin: 30px 0;
+}
+/*----------------------------------*/
+
+/*Responsive------------------------*/
+@media only screen and (max-width: 992px){
+	/*Header----------------------------*/
+	.page-header{
+		padding: 10px 0;
+	}
+
+	.menu-flex{
+		height: 40px;
+	}
+
+	.menu-logo{
+		width: 45px;
+	}
+
+	.menu-logo img{
+		max-width: 100%;
+		display: block;
+		border-radius: 5px;
+	}
+	/*----------------------------------*/
+	/*Main Banner Section---------------*/
+	.main-banner{
+		padding: 80px;
+	}
+
+	.main-banner h1{
+		font-size: 60px;
+	}
+
+	.main-banner h2{
+		font-size: 50px;
+	}
+
+	.main-banner p{
+		font-size: 16px;
+		margin: 30px 0;
+		max-width: 400px;
+	}
+
+	.main-banner img{
+		height: 20px;
+	}
+	/*----------------------------------*/
+
+	/*About Section (Flex)--------------*/
+	.about{
+		padding: 80px 0;
+	}
+
+	.about-parent{
+		gap: 80px;
+	}
+
+	.about-txt-child{
+		width: 50%;
+	}
+
+	.about-txt-child h2{
+		font-size: 50px;
+	}
+
+	.about-txt-child p{
+		margin: 25px 0;
+		font-size: 20px;
+	}
+
+	.about-txt-child ul{
+		margin-bottom: 20px;
+	}
+
+	.about-img-child{
+		height: 450px;
+	}
+	/*----------------------------------*/
+
+	/*Call to action Banner-------------*/
+	.call-action-banner{
+		padding: 70px 0;
+	}
+
+	.call-action-banner h2{
+		font-size: 30px;
+		margin-bottom: 40px;
+	}
+	/*----------------------------------*/
+
+	/*Lenders Section-------------------*/
+	.services{
+		padding: 70px 0;
+	}
+
+	.lenders p:nth-of-type(1){
+		font-size: 17px;
+	}
+
+	.lenders h2{
+		font-size: 70px;
+	}
+
+	.lenders p:nth-of-type(2){
+		font-size: 19px;
+	}
+
+	.services-parent{
+		grid-gap: 35px;
+		padding: 60px 0;
+	}
+
+	.services-child h5{
+		font-size: 19px;
+	}
+	/*----------------------------------*/
+
+	/*Team Section----------------------*/
+	.team{
+		padding: 15px 0 60px;
+	}
+
+	.team-parent-flex{
+		flex-direction: column;
+		gap: 50px;
+	}
+
+	.team-title{
+		width: 100%;
+	}
+
+	.team-title h2{
+		font-size: 50px;
+	}
+
+	.team-parent-grid{
+		width: 100%;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 20px;
+	}
+
+	.team-child-grid h5{
+		font-size: 17px;
+	}
+
+	.team-child-grid p{
+		margin-bottom: 15px;
+	}
+	/*----------------------------------*/
+
+	/*Footer Section--------------------*/
+	.page-footer{
+		padding: 50px 0;
+	}
+
+	footer .links{
+		gap: 45px;
+	}
+
+	footer i{
+		font-size: 25px;
+	}
+
+	footer .text{
+		font-size: 20px;
+	}
+	/*----------------------------------*/
+}
+/*--------------------------------------*/
+/*--------------------------------------*/
+@media only screen and (max-width: 768px){
+	/*Header----------------------------*/
+	.page-header .links{
+		display: none;
+		position: relative;
+	}
+
+	.burger-menu{
+		display: block;
+		position: absolute;
+		right: 20px;
+	}
+
+	.burger-menu i{
+		font-size: 22px;
+	}
+	/*----------------------------------*/
+
+	/*Main Banner Section---------------*/
+	.main-banner h1{
+		font-size: 50px;
+	}
+
+	.main-banner h2{
+		font-size: 40px;
+	}
+
+	.main-banner p{
+		font-size: 18px;
+		margin: 20px 0;
+		max-width: 300px;
+	}
+
+	.main-banner img{
+		height: 18px;
+	}
+	/*----------------------------------*/
+
+	/*About Section (Flex)--------------*/
+	.about{
+		padding: 50px 0;
+	}
+
+	.about-parent{
+		gap: 50px;
+	}
+
+	.about-txt-child h2{
+		font-size: 40px;
+	}
+
+	.about-txt-child p{
+		margin: 20px 0;
+		font-size: 18px;
+	}
+
+	.about-txt-child ul{
+		margin-bottom: 15px;
+	}
+
+	ul img{
+		height: 10px;
+	}
+
+	.about-img-child{
+		height: 400px;
+	}
+	/*----------------------------------*/
+
+	/*Call to action Banner-------------*/
+	.call-action-banner{
+		padding: 50px 0;
+	}
+
+	.call-action-banner h2{
+		font-size: 25px;
+		margin-bottom: 30px;
+	}
+
+	.call-action-banner a{
+		border-radius: 20px;
+		padding: 10px 20px;
+	}
+	/*----------------------------------*/
+
+	/*Lenders Section-------------------*/
+	.services{
+		padding: 50px 0;
+	}
+
+	.lenders p:nth-of-type(1){
+		font-size: 15px;
+	}
+
+	.lenders h2{
+		font-size: 60px;
+	}
+
+	.lenders p:nth-of-type(2){
+		font-size: 18px;
+	}
+
+	.services-parent{
+		grid-gap: 30px;
+		padding: 50px 0;
+	}
+
+	.services-child h5{
+		font-size: 18px;
+	}
+	/*----------------------------------*/
+
+	/*Team Section----------------------*/
+	.team-child-grid img:nth-of-type(2){
+		height: 17px;
+	}
+	/*----------------------------------*/
+
+	/*Footer Section--------------------*/
+	.page-footer{
+		padding: 40px 0;
+	}
+
+	.page-footer ul{
+		gap: 40px;
+	}
+
+	.page-footer i{
+		font-size: 23px;
+	}
+
+	.page-footer .text{
+		font-size: 18px;
+	}
+	/*----------------------------------*/
+}
+/*--------------------------------------*/
+/*--------------------------------------*/
+@media only screen and (max-width: 576px){
+	/*Main Banner Section---------------*/
+	.main-banner{
+		padding: 95px 0 60px;
+	}
+
+	.main-banner h1{
+		font-size: 40px;
+	}
+
+	.main-banner h2{
+		font-size: 30px;
+	}
+
+	.main-banner p{
+		font-size: 16px;
+		max-width: 250px;
+	}
+
+	.main-banner img{
+		height: 16px;
+	}
+	/*----------------------------------*/
+
+	/*About Section (Flex)--------------*/
+	.about-parent{
+		gap: 30px;
+		flex-direction: column-reverse;
+	}
+
+	.about-txt-child{
+		width: 100%;
+	}
+
+	.about-txt-child h2{
+		font-size: 35px;
+	}
+
+	.about-txt-child p{
+		font-size: 17px;
+	}
+
+	.about-btn{
+		font-size: 14px;
+		padding: 12px 15px;
+	}
+
+	.about-btn img{
+		height: 10px;
+	}
+
+	.about-img-child{
+		width: 100%;
+		height: 300px;
+		border-radius: 20px;
+	}
+	/*----------------------------------*/
+
+	/*Call to action Banner-------------*/
+	.call-action-banner{
+		padding: 40px 0;
+	}
+
+	.call-action-banner h2{
+		font-size: 23px;
+		margin-bottom: 25px;
+	}
+	/*----------------------------------*/
+
+	/*Lenders Section-------------------*/
+	.services{
+		padding: 40px 0;
+	}
+
+	.lenders h2{
+		font-size: 50px;
+	}
+
+	.lenders p:nth-of-type(2){
+		font-size: 17px;
+	}
+
+	.services-parent{
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 20px;
+		padding: 40px 0;
+	}
+
+	.services-child h5{
+		font-size: 16px;
+	}
+	/*----------------------------------*/
+
+	/*Team Section----------------------*/
+	.team-parent-grid{
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.team-title h2{
+		font-size: 40px;
+	}
+	/*----------------------------------*/
+
+	/*Footer Section--------------------*/
+	.page-footer{
+		padding: 40px 0 20px;
+	}
+
+	.footer-parent{
+		gap: 30px;
+	}
+	/*----------------------------------*/
+}
+/*--------------------------------------*/
+/*--------------------------------------*/
+@media only screen and (max-width: 480px){
+	/*Header----------------------------*/
+	.burger-menu i{
+		font-size: 18px;
+	}
+	/*----------------------------------*/
+	/*About Section (Flex)--------------*/
+	.about-txt-child h2{
+		font-size: 30px;
+	}
+
+	.about-img-child{
+		height: 200px;
+	}
+	/*----------------------------------*/
+
+	/*Call to action Banner-------------*/
+	.call-action-banner h3{
+		font-weight: 500;
+	}
+	/*----------------------------------*/
+
+	/*Lenders Section-------------------*/
+	.lenders h2{
+		font-size: 45px;
+	}
+	/*----------------------------------*/
+
+	/*Team Section----------------------*/
+	.team-parent-grid{
+		grid-template-columns: repeat(1, 1fr);
+/*		text-align: center;*/
+	}
+
+	.team-title h2{
+		font-size: 40px;
+	}
+
+	.team-child-grid img{
+		height: 200px;
+	}
+	/*----------------------------------*/
+
+	/*Footer Section--------------------*/
+	.page-footer{
+		padding: 30px 0 10px;
+	}
+
+	footer .links{
+		gap: 20px;
+	}
+
+	footer i{
+		font-size: 20px;
+	}
+
+	footer .text{
+		font-size: 18px;
+	}
+	/*----------------------------------*/
+}
+/*--------------------------------------*/

@@ -1,0 +1,159 @@
+@import "variables";
+
+.experiences-banner{
+    padding: 200px 0;
+    background-image: $experiences-banner-img;
+    background-position: center;
+    background-size: cover;
+
+    .banner-text{
+        h2{
+            @include page-title-style;
+        }
+    }   
+}
+
+.experiences-sec{
+    background-image: $experiences-bg-img;
+    // background-image: $experiences-banner-img;
+    background-color: rgba(0, 0, 0, 60%);
+    background-blend-mode: overlay;
+    background-position: center;
+    background-size: cover;
+
+    ul{
+        list-style: disc;
+        margin: 20px;
+
+        li{
+            margin: 10px 0;
+        }
+    }
+
+    h4{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .titles-flex{
+        margin-bottom: 80px;
+        display: flex;
+        gap: 0px;
+        justify-content: space-between;
+        text-align: center;
+        // border: 1px solid red;
+
+        h3{
+            font-size: 30px;
+        }
+    
+        .education-title{
+            width: 50%;
+            color: #60B5FF;
+        }
+        
+        .experience-title{
+            width: 50%;
+            color: #FCB454;
+        }
+    }
+
+    .info-flex{
+        display: flex;
+        gap: 0px;
+        margin-bottom: 50px;
+
+        h3{
+            margin-bottom: 5px;
+        }
+
+        .info-container{
+            width: 51%;
+            display: flex;
+            gap: 0;
+
+            .info-text{
+                width: 60%;
+                padding: 10px;
+                border-radius: 10px;
+
+                h4{
+                    font-size: 14px;
+                    text-align: right;
+                }
+            }
+
+            .education-info-text{
+                border: 3px solid #60B5FF;
+                background-color: #AFDDFF;
+                color: #102E50;
+
+                h4{
+                    color: #3A59D1;
+                }
+            }
+
+            .experience-info-text{
+                border: 3px solid #FCB454;
+                background-color: #FFDDAB;
+                color: #4E1F00;
+
+                h4{
+                    color: #A76545;
+                }
+            }
+
+            .info-dot{
+                width: 10%;
+                margin-top: 10px;
+
+                img{
+                    width: 40px;
+                    height: auto;
+                    border-radius: 40px;
+                }
+
+                .education-dot{
+                    border: 3px solid #60B5FF;
+                }
+
+                .experience-dot{
+                    border: 3px solid #FCB454;
+                    margin-left: 14px;
+                }
+            }
+
+            .info-line{
+                width: 30%;
+
+                hr{
+                    width: 100%;
+                }
+            }
+
+            .education-line{
+                h4{
+                    color: #60B5FF;
+                }
+
+                hr{
+                    border: 3px solid #60B5FF;
+                }
+            }
+
+            .experience-line{
+                h4{
+                    color: #FCB454;
+                }
+
+                hr{
+                    border: 3px solid #FCB454;
+                }
+            }
+        }
+
+        .empty{
+            width: 45%;
+        }
+    }
+}

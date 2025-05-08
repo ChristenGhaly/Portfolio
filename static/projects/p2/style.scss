@@ -1,0 +1,882 @@
+// Home Decor Final Project
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.container{
+	width: 90%;
+	max-width: 1100px;
+}
+
+// Variables-------------------------------------
+$title-font: "Lora", serif;
+$body-font: "Raleway", sans-serif;
+$header-bg-color: #2F3645;
+$disappear: 0.5s disappear-box forwards;
+$size: 100px;
+$box-gap: 10px;
+$pos120: calc($size + 2 * $box-gap);
+$pos240: calc(2 * $size + 4 * $box-gap);
+$pos360: calc(3 * $size + 6 * $box-gap);
+$pos480: calc(4 * $size + 8 * $box-gap);
+$delay1: 0.3s;
+$delay2: 0.6s;
+$delay3: 0.9s;
+$delay4: 1.2s;
+$delay5: 1.5s;
+$delay6: 2s;
+$delay7: 2.3s;
+$appear-h1: 1s h1appear forwards;
+$appear-h4: 1s h4appear forwards;
+$appear-hr: 1s hr-appear forwards;
+$appear-btn: 1s btn-appear forwards;
+$appear-card: 1s show-card forwards;
+// ----------------------------------------------
+
+// General Css-----------------------------------
+body{
+	overflow-x: hidden; 
+	font-family: $body-font;
+}
+
+section{
+	padding: 80px 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: $title-font;
+}
+
+a{
+	text-decoration: none;	
+}
+
+.slick-arrow{
+	font-size: 0;
+	border: 1px solid #FFBF00;
+	border-radius: 25px;
+	height: 50px;
+	width: 50px;
+	background-image: url(https://png.pngtree.com/png-clipart/20220206/original/pngtree-gold-arrow-head-png-image_7263825.png);
+	background-size: cover;
+	background-position: center;
+	position: absolute;
+	top: 40%;
+	// transform: translateY(-50%); 
+}
+
+.slick-prev{
+	transform: rotate(180deg);
+	right: 101%;
+}
+
+.slick-next{
+	left: 101%;
+}
+// ----------------------------------------------
+
+// Header----------------------------------------
+.page-header{
+	background-color: $header-bg-color;
+	transition: 1s;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+
+	// body.burger-menu-open{
+	// 	overflow-y: hidden;
+	// }
+
+	// body.burger-menu-open .burger-links{
+	// 	display: block;
+	// }
+
+	img{
+		height: 45px;
+		border: 2px solid #FFBF00;
+	}
+
+	a{
+		text-decoration: none;
+		color: #fff;
+
+		&:hover{
+			color: #F4CE14;
+		}
+	}
+
+	ul{
+		list-style: none;
+	}
+
+	.header-flex{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 50px;
+	}
+
+	.burger-menu{
+		display: none;
+		font-size: 25px;
+		color: $header-bg-color;
+	}
+
+	.burger-links{
+		.burger-close-btn{
+			background-color: #F4CE14;
+			top: 10px;
+			right: 10px;
+			color: $header-bg-color;
+			font-size: 20px
+		}
+
+		width: 100vw;
+		height: 100vh;
+		display: none;
+		padding: 20px;
+		padding-top: 70px;
+		background-color: $header-bg-color;
+		text-align: left;
+		z-index: 100;
+		top: 0px;
+		right: 0px;
+
+		hr{
+			color: #fff;
+		}
+	}
+
+	.menu-holder{
+		.menu{
+			display: flex;
+			gap: 40px;
+		}
+	}
+}
+// ----------------------------------------------
+
+// Main Banner Section---------------------------
+.main-banner{
+	background: url(https://mydecorative.com/wp-content/uploads/2021/06/interior-design-styles.jpg);
+	background-color: rgba(0, 0, 0, 45%);
+	background-blend-mode: overlay;
+	padding: 200px 0;
+
+	.animation{
+		z-index: 1;
+	}
+
+	// Disappearing divs [animation] ------------
+	.anim-div{
+		width: $size;
+		height: $size;
+		animation: $disappear;
+	}
+
+	.anim-div0{
+		top: $box-gap;
+		left: $box-gap;
+	}
+	// Level #1 animation--------------
+	.anim-div1{
+		top: $box-gap;
+		left: $pos120;
+		animation-delay: $delay1;
+	}
+	.anim-div2{
+		top: $pos120;
+		left: $box-gap;
+		animation-delay: $delay1;
+	}
+	// Level #2 animation--------------
+	.anim-div3{
+		top: $box-gap;
+		left: $pos240;
+		animation-delay: $delay2;
+	}
+	.anim-div4{
+		top: $pos120;
+		left: $pos120;
+		animation-delay: $delay2;
+	}
+	.anim-div5{
+		top: $pos240;
+		left: $box-gap;
+		animation-delay: $delay2;
+	}
+	// Level #3 animation--------------
+	.anim-div6{
+		top: $box-gap;
+		left: $pos360;
+		animation-delay: $delay3;
+	}
+	.anim-div7{
+		top: $pos120;
+		left: $pos240;
+		animation-delay: $delay3;
+	}
+	.anim-div8{
+		top: $pos240;
+		left: $pos120;
+		animation-delay: $delay3;
+	}
+	.anim-div9{
+		top: $pos360;
+		left: $box-gap;
+		animation-delay: $delay3;
+	}
+	// Level #4 animation--------------
+	.anim-div10{
+		top: $box-gap;
+		left: $pos480;
+		animation-delay: $delay4;
+	}
+	.anim-div11{
+		top: $pos120;
+		left: $pos360;
+		animation-delay: $delay4;
+	}
+	.anim-div12{
+		top: $pos240;
+		left: $pos240;
+		animation-delay: $delay4;
+	}
+	.anim-div13{
+		top: $pos360;
+		left: $pos120;
+		animation-delay: $delay4;
+	}
+	.anim-div14{
+		top: $pos480;
+		left: $box-gap;
+		animation-delay: $delay4;
+	}
+
+	// Opposit Animation-------------------------
+	.anim-div15{
+		bottom: $box-gap;
+		right: $box-gap;
+	}
+	// Level #1 animation--------------
+	.anim-div16{
+		bottom: $box-gap;
+		right: $pos120;
+		animation-delay: $delay1;
+	}
+	.anim-div17{
+		bottom: $pos120;
+		right: $box-gap;
+		animation-delay: $delay1;
+	}
+	// Level #2 animation--------------
+	.anim-div18{
+		bottom: $box-gap;
+		right: $pos240;
+		animation-delay: $delay2;
+	}
+	.anim-div19{
+		bottom: $pos120;
+		right: $pos120;
+		animation-delay: $delay2;
+	}
+	.anim-div20{
+		bottom: $pos240;
+		right: $box-gap;
+		animation-delay: $delay2;
+	}
+	// Level #3 animation--------------
+	.anim-div21{
+		bottom: $box-gap;
+		right: $pos360;
+		animation-delay: $delay3;
+	}
+	.anim-div22{
+		bottom: $pos120;
+		right: $pos240;
+		animation-delay: $delay3;
+	}
+	.anim-div23{
+		bottom: $pos240;
+		right: $pos120;
+		animation-delay: $delay3;
+	}
+	.anim-div24{
+		bottom: $pos360;
+		right: $box-gap;
+		animation-delay: $delay3;
+	}
+	// Level #4 animation--------------
+	.anim-div25{
+		bottom: $box-gap;
+		right: $pos480;
+		animation-delay: $delay4;
+	}
+	.anim-div26{
+		bottom: $pos120;
+		right: $pos360;
+		animation-delay: $delay4;
+	}
+	.anim-div27{
+		bottom: $pos240;
+		right: $pos240;
+		animation-delay: $delay4;
+	}
+	.anim-div28{
+		bottom: $pos360;
+		right: $pos120;
+		animation-delay: $delay4;
+	}
+	.anim-div29{
+		bottom: $pos480;
+		right: $box-gap;
+		animation-delay: $delay4;
+	}
+	// -----------------------------------------
+
+	@keyframes disappear-box{
+		0%{
+			opacity: 1;
+		}
+		100%{
+			opacity: 0;
+		}
+	}
+	// ------------------------------------------
+
+	h4{
+		opacity: 0;
+		animation: $appear-h4;
+		animation-delay: $delay6;
+		letter-spacing: 2px;
+	}
+
+	@keyframes h4appear{
+		0%{
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		100%{
+			opacity: 1;
+			transform: translateY(0px);
+		}
+	}
+
+	h1{
+		opacity: 0;
+		animation: $appear-h1;
+		animation-delay: $delay5;
+	}
+
+	@keyframes h1appear{
+		0%{
+			opacity: 0;
+			transform: scale(0);
+			
+		}
+		100%{
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	hr{
+		max-width: 0;
+		animation: $appear-hr;
+		animation-delay: $delay7;
+	}
+
+	@keyframes hr-appear{
+		0%{
+			max-width: 0;
+		}
+		100%{
+			max-width: 250px
+		}
+	}
+
+	button{
+		opacity: 0;
+		transition: 0.5s;
+		animation: $appear-btn;
+		animation-delay: $delay7;
+
+		&:hover{
+			background-color: #000;
+			color: #FFBF00;
+		}
+	}
+
+	@keyframes btn-appear{
+		0%{
+			opacity: 0;
+		}
+		100%{
+			opacity: 1;
+		}
+	}
+}
+// ----------------------------------------------
+
+// Left-Right Section----------------------------
+.left-right-sec{
+	padding: 100px 0;
+
+	.left{
+		button{
+			padding: 7px 25px;
+			transition: 0.5s;
+
+			&:hover{
+				background-color: #FFB200;
+				border: 1px solid #000;
+				color: #000;
+			}
+		}
+	}
+	.right{
+		background-image: url(https://rnb.scene7.com/is/image/roomandboard/category_decor_feat04?size=900,900&scl=1);
+		height: 300px;
+		animation: 10s rightImgAnim infinite;
+		transition: 2s;
+	}
+
+	@keyframes rightImgAnim{
+		0%{
+			background-image: url(https://rnb.scene7.com/is/image/roomandboard/category_decor_feat04?size=900,900&scl=1);
+		}
+		25%{
+			background-image: url(https://assets.wfcdn.com/im/93255368/resize-h600-w600%5Ecompr-r85/2177/217783977/Ochlocknee+Nature+Figurine+%2F+Sculpture.jpg);
+		}
+		50%{
+			background-image: url(https://diytrainingcenter.com/cdn/shop/products/Untitleddesign_89_300x300.png?v=1691445379);
+		}
+		75%{
+			background-image: url(https://s.alicdn.com/@sc04/kf/Hd0abec9eb4f44ca79da98b45e429aead1.jpg_300x300.jpg);
+		}
+		0%{
+			background-image: url(https://rnb.scene7.com/is/image/roomandboard/category_decor_feat04?size=900,900&scl=1);
+		}
+	}
+}
+// ----------------------------------------------
+
+// Grid Section----------------------------------
+.grid-sec{
+	background: url("https://www.marthastewart.com/thmb/wgh8U3fpm7zWJyypt0-3FmnQvyE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/mountain-modern-trend-living-room-wood-ceiling-getty-0523-b6ef5d16b4c94702806ccfbe161eaba9.jpg");
+	background-color: rgba(0, 0, 0, 50%);
+	background-blend-mode: overlay;
+	padding: 80px 0;
+	text-shadow: 1px 1px 3px black;
+	animation: 10s bg-anim infinite;
+	transition: 1s;
+
+	@keyframes bg-anim{
+		0%{
+			background: url("https://www.marthastewart.com/thmb/wgh8U3fpm7zWJyypt0-3FmnQvyE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/mountain-modern-trend-living-room-wood-ceiling-getty-0523-b6ef5d16b4c94702806ccfbe161eaba9.jpg");
+			background-color: rgba(0, 0, 0, 50%);
+			background-blend-mode: overlay;
+			background-position: center;
+			background-size: cover;
+		}
+
+		50%{
+			background: url("https://mydecorative.com/wp-content/uploads/2021/11/living-room-decor-ideas.jpg");
+			background-color: rgba(0, 0, 0, 50%);
+			background-blend-mode: overlay;
+			background-position: center;
+			background-size: cover;
+		}
+	}
+
+	// .grid-anim{
+	// 	transform: scale(0);
+	// 	transition: 0.5s;
+	// 	animation: $appear-card;
+	// }
+
+	// .grid-card2{
+	// 	animation-delay: $delay1;
+	// }
+
+	// .grid-card3{
+	// 	animation-delay: $delay2;
+	// }
+
+	// .grid-card4{
+	// 	animation-delay: $delay3;
+	// }
+
+	// .grid-card5{
+	// 	animation-delay: $delay4;
+	// }
+
+	// .grid-card6{
+	// 	animation-delay: $delay5;
+	// }
+
+	// @keyframes show-card{
+	// 	0%{
+	// 		opacity: 0;
+	// 		transform: scale(0);
+	// 	}
+	// 	100%{
+	// 		opacity: 1;
+	// 		transform: scale(1);
+	// 	}
+	// }
+}
+// ----------------------------------------------
+
+// Latest News Section---------------------------
+.news-sec{
+	padding: 90px 0;
+
+	.news-img{
+		height: 300px;
+	}
+
+	.news-img1{
+		background-image: url(https://cdn.shopify.com/s/files/1/0386/8858/7915/files/Hauser-furniture-garden-tour-49_1024x1024.jpg?v=1691761640);
+	}
+
+	.news-img2{
+		background-image: url(https://cdn.shopify.com/s/files/1/0386/8858/7915/files/Kate-Penny-Living-Room-8_2048x2048.jpg?v=1670597628);
+	}
+
+	.news-img3{
+		background-image: url(https://cdn.shopify.com/s/files/1/0386/8858/7915/files/NeutralKitchen-WillowCreekKitchen-MaisonBlonde-1_2048x2048.jpg?v=1655393198); 
+	}
+
+	.news-img4{
+		background-image: url(https://cdn.shopify.com/s/files/1/0386/8858/7915/files/Woodhill_Bungallow_Project_Ensuite_Project_Maison_Blonde-3_2048x2048.jpg?v=1652454971);
+	}
+
+	.slick-dotted{
+		.slick-dots{
+			list-style: none;
+			display: flex;
+			justify-content: center;
+			gap: 20px;
+			position: absolute;
+			left: 50%;
+			top: 100%;
+			transform: translateX(-60%);
+
+			button{
+				background-color: #C40C0C;
+				border: 0;
+				border-radius: 2px;
+				transform: rotate(90deg); 
+				font-size: 0;
+				height: 10px;
+				width: 10px;
+
+				&:hover{
+					background-color: #A87676;
+				}
+			}
+		}
+	}
+
+	.article-popup{
+		height: 100vh;
+		width: 100vw;
+		background-color: $header-bg-color;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		display: none;
+
+		.article-content{
+			padding: 50px;
+			background-color: #fff;
+			width: 80%;
+			height: 80%;
+			overflow-y: scroll;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			.close-btn{
+				z-index: 200;
+				border: 1px solid #E4003A;
+				background-color: #E4003A;
+				color: #fff;
+			}
+
+			.article-img{
+				height: 400px;
+			}
+
+			hr{
+				max-width: 200px;
+			}
+		}
+	}
+
+	.article-popup1{
+		.article-img{
+			background-image: url(https://cdn.shopify.com/s/files/1/0386/8858/7915/files/Hauser-furniture-garden-tour-05_1024x1024.jpg?v=1691163077);
+		}
+	}
+
+	.article-popup2{
+		.article-img{
+			background-image: url(https://cdn.shopify.com/s/files/1/0386/8858/7915/files/Kate-Penny-Living-Room-8_2048x2048.jpg?v=1670597628);
+		}
+	}
+}
+// ----------------------------------------------
+
+// Gallery Section-------------------------------
+.gallery-sec{
+	.container{
+		max-width: 100%;
+	}
+
+	.gallery-img{
+		height: 300px;
+		border: 2px solid #FFBF00;
+	}
+
+	.gallery-img1{
+		background-image: url(https://nordicwallart.com/cdn/shop/products/GoldenRingModernAestheticsAbstractWallArtFineArtCanvasPrintsGeometricPicturesForLuxuryLivingRoomDiningRoom_HomeOfficeDecor202308.jpg?v=1676419014&width=533);
+	}
+
+	.gallery-img2{
+		background-image: url(https://blog.circu.net/wp-content/uploads/2020/11/Modern-Kids-Bedroom-Ideas-To-Inspire-You-Today-8.jpg);
+	}
+
+	.gallery-img3{
+		background-image: url(https://i.pinimg.com/736x/02/d9/60/02d960a7a230d82bb1db43b19d19208a.jpg);
+	}
+
+	.gallery-img4{
+		background-image: url(https://hips.hearstapps.com/hmg-prod/images/modern-kitchen-ideas-design-1664295332.png?crop=0.720xw:0.544xh;0.245xw,0.289xh&resize=1200:*);
+	}
+
+	.gallery-img5{
+		background-image: url(https://www.luxurybathrooms.eu/wp-content/uploads/2021/10/Luxurious-Bathroom-Ideas-That-Will-Blow-Your-Mind-5-modern-bathroom-design.jpg);
+	}
+
+	.gallery-img6{
+		background-image: url(https://cdn.decoist.com/wp-content/uploads/2013/07/Outdoor-seating-in-a-modern-yard.jpg);
+	}
+
+	.gallery-img7{
+		background-image: url(https://www.galstian-furniture.com/wp-content/uploads/2024/02/03-o10Accessories.jpg);
+	}
+
+	.gallery-img8{
+		background-image: url(https://m.media-amazon.com/images/I/81XUpZYnc0L._AC_UF894,1000_QL80_.jpg);
+	}
+}
+// ----------------------------------------------
+
+// Contact Info Page-----------------------------
+.contact-banner{
+	padding: 200px 0;
+	background: url(https://img.staticmb.com/mbcontent/images/crop/uploads/2023/2/minimalistic-home-decor_0_1200.jpg);
+	font-family: "Dancing Script", cursive;
+	color: $header-bg-color;
+
+	.contact-title{
+		background-color: rgba(255, 255, 255, 50%);
+		background-blend-mode: overlay;
+	}
+
+	.contact-title p{
+		animation: 5s contactAnim infinite alternate;
+	}
+
+	@keyframes contactAnim{
+		0%{
+			transform: translateX(-300px); 
+		}
+		100%{
+			transform: translateX(300px); 
+		}
+	}
+}
+
+.contact-info{
+	padding: 150px 0 50px 0;
+
+	i:hover{
+		color: #FFBF00;
+	}
+}
+
+.contact-map{
+	iframe{
+		width: 600px;
+		height: 450px;
+	}
+}
+
+.contact-form{
+	padding: 30px 0 100px 0;
+
+	.form{
+		max-width: 700px;
+	}
+
+	button{
+		&:hover{
+			background-color: #FFB200;
+			color: #000;
+		}
+	}
+}
+// ----------------------------------------------
+
+// Page Footer-----------------------------------
+.page-footer{
+	color: $header-bg-color;
+	background-color: #DAD3BE;
+	border-top: 2px solid $header-bg-color;
+	box-shadow: 1px 1px 7px $header-bg-color;
+
+	.footer-parent{
+		a{
+			color: $header-bg-color;
+			display: block;
+
+			&:hover{
+				color: #FF8F00;
+			}
+		}
+
+		button{
+			&:hover{
+				background-color: #FFB200;
+				color: #000;
+			}
+		}
+
+		ul{
+			max-width: 300px;
+			list-style: none;
+		}
+	}
+}
+
+// ----------------------------------------------
+
+// General CSS-----------------------------------
+.main-banner,
+.right,
+.grid-sec,
+.news-img,
+.article-img,
+.gallery-img,
+.contact-banner{
+	background-position: center;
+	background-size: cover; 
+}
+// ----------------------------------------------
+
+// Responsive------------------------------------
+@media only screen and (max-width: 992px){
+	.contact-banner{
+		padding: 170px 0;
+	}
+
+	.contact-info{
+		padding-top: 100px;
+		padding-bottom: 0;
+	}
+}
+
+@media only screen and (max-width: 768px){
+	.page-header{
+		.burger-menu{
+			display: block;
+		}
+
+		.menu-holder{
+			display: none;
+		}
+	}
+
+	.main-banner{
+		.anim-div10,
+		.anim-div11,
+		.anim-div12,
+		.anim-div13,
+		.anim-div14{
+			display: none;
+		}
+	}
+
+	.news-sec{
+		padding: 50px 0;
+	}
+
+	.contact-banner{
+		padding: 150px 0;
+	}
+
+	.contact-map{
+		iframe{
+			width: 500px;
+			height: 350px;
+		}
+	}
+
+	.page-footer{
+		.footer-parent{
+			text-align: center;
+
+			.contact-icons{
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.subscribe-email{
+				width: 200px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 576px){
+	.main-banner{
+		.anim-div25,
+		.anim-div26,
+		.anim-div27,
+		.anim-div28,
+		.anim-div29{
+			display: none;
+		}
+	}
+
+	.contact-map{
+		iframe{
+			width: 400px;
+			height: 250px;
+		}
+	}
+}
+
+@media only screen and (max-width: 480px){
+	.main-banner{
+		.anim-div6,
+		.anim-div7,
+		.anim-div8,
+		.anim-div9,
+		.anim-div21,
+		.anim-div21,
+		.anim-div23,
+		.anim-div24{
+			display: none;
+		}
+	}
+}
+// ----------------------------------------------

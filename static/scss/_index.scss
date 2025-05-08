@@ -1,0 +1,100 @@
+@import "variables";
+
+.banner{
+    position: relative;
+    padding: 200px 0;
+    background-image: $main-banner-img;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+
+    .tools-flex{
+        position: absolute;
+        top: 88%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        
+        .hexagon{
+            margin: 20px 0;
+            // width: 150px;
+            // height: 150px;
+            // background-color: transparent;
+            // box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.1),
+            //             1px 1px 15px rgba(100, 150, 255, 0.4);
+            // clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            // display: inline-block;
+            cursor: zoom-in;
+
+            img{
+                margin: auto;
+                max-width: 100%;
+                display: block;
+                height: 80px;
+            }
+
+            &:hover{
+                transform: scale(1.1);
+            }
+        } 
+    }
+}
+
+.projects{
+    margin-top: 100px;
+    padding: 100px;
+    color: #fff;
+
+    .projects-grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+
+        .project-card{
+            background-color: #fff;
+            border: 2px solid aqua;
+            border-radius: 10px;
+
+            .project-title{
+                padding: 20px;
+                background-color: aqua;
+                h2{
+                    color: #102E50;
+                } 
+            }
+            
+            .project-flex{
+                display: flex;
+                gap: 30px;
+            }
+
+            .project-text{
+                width: 50%;
+            }
+
+            .project-img{
+                width: 50%;
+                img{
+                    // margin: 20px auto 10px;
+                    border: 1px solid #EAD196;
+                    height: 400px;
+                    width: auto;
+                }
+            }
+                
+
+            // &:hover{
+            //     transform: scale(1.1);
+            // }
+        }
+    }
+
+    button{
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+}

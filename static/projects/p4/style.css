@@ -1,0 +1,691 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.container{
+	width: 90%;
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body{
+	overflow-x: hidden;
+	font-family: "Roboto", sans-serif;
+}
+
+section{
+	padding: 150px 0;
+}
+
+h1, h3, h4, h5{
+	font-family: "Libre Caslon Text", serif;
+}
+
+p{
+	margin-bottom: 20px;
+	color: #B3C8CF;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+ul{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	display: inline-block;
+	transition: 0.5s;
+}
+
+.bg-img{
+	background-size: cover;
+	background-position: center;
+}
+
+/*General CSS-----------------------*/
+.ourstory-child-text h2,
+.ouroffers-title h2{
+	font-weight: 400;
+	font-size: 20px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+	color: #B3C8CF;
+}
+
+.ourstory-child-text h3,
+.ouroffers-title h3,
+.gallery-title h3{
+	font-size: 50px;
+	font-weight: 500;
+	text-transform: capitalize;
+	color: #000;
+	margin-bottom: 10px;
+}
+
+.ouroffers-title p,
+.gallery-title p{
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 30px;
+}
+
+.header-child-menu a,
+.footer-ul li a{
+	color: #B3C8CF;
+}
+
+.header-child-menu a:hover,
+.footer-ul li a:hover{
+	color: #fff;
+}
+/*----------------------------------*/
+
+/*Header----------------------------*/
+.page-header{
+	transition: 1s;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
+.header-parent{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 80px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+/*	font-family: "HelveticaNeue";*/
+}
+
+.header-child-logo{
+	color: #fff;
+}
+
+.burger-menu{
+	font-size: 20px;
+	color: #B3C8CF;
+	display: none;
+}
+
+.burger-menu button{
+	padding: 5px;
+	border: 0;
+	border-radius: 5px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.header-child-menu ul{
+	display: flex;
+	gap: 30px;
+	font-size: 14px;
+}
+/*----------------------------------*/
+
+/*Main Banner-----------------------*/
+.main-banner-sec{
+	padding: 250px 0;
+	background: url("https://png.pngtree.com/background/20231017/original/pngtree-3d-illustration-of-a-coffee-shop-or-restaurant-s-exterior-picture-image_5592632.jpg");
+	background-color: rgba(0, 0, 0, 65%);
+	background-blend-mode: overlay;
+	background-size: cover;
+	background-position: center top;
+}
+
+.main-banner-text{
+	text-align: center;
+}
+
+.main-banner-text h1{
+	font-size: 50px;
+	color: #fff;
+	animation: 1s h1-anim forwards;
+}
+
+@keyframes h1-anim{
+	0%{
+		transform: translateY(0);
+		opacity: 0;
+	}
+	50%{
+		transform: translateY(-50px);
+		opacity: 50%;
+	}
+	100%{
+		transform: translateY(0);
+		opacity: 100%;
+	}
+}
+
+.main-banner-text p{
+	font-size: 18px;
+	margin: 20px 0 40px;
+	animation: 1s text-anim backwards;
+	animation-delay: 1s;
+}
+
+@keyframes text-anim{
+	0%{
+		transform: scale(2);
+		opacity: 0;
+	}
+	50%{
+		transform: scale(1);
+		opacity: 50%;
+	}
+	100%{
+		transform: scale(1);
+		opacity: 100%;
+	}
+}
+
+.main-banner-text a{
+	font-family: "Libre Caslon Text", serif;
+	padding: 12px 30px;
+	background-color: #000;
+	border: 1px solid #fff;
+	color: #fff;
+}
+
+.main-banner-text a:hover{
+	background-color: #fff;
+	color: #000;
+	font-weight: 600;
+}
+/*----------------------------------*/
+
+/*Our Story Section-----------------*/
+.ourstory-sec{
+	padding: 120px 0;
+}
+
+.ourstory-parent{
+	display: flex;
+	gap: 100px;
+}
+
+.ourstory-child-text{
+	width: 45%;
+	color: #B3C8CF;
+}
+
+.ourstory-child-text a{
+	margin-top: 10px;
+	font-family: "Libre Caslon Text", serif;
+	padding: 13px 28px;
+	border: 1px solid #B3C8CF;
+	color: #B3C8CF;
+}
+
+.ourstory-child-img{
+	width: 55%;
+	background-image: url("https://snowmaster.com.au/wp-content/uploads/2019/11/Own-a-Restaurent.jpg");
+	height: 350px;
+}
+/*----------------------------------*/
+
+/*Our Offers Section----------------*/
+.ouroffers-sec{
+	background-color: #EEEEEE;
+}
+
+.ouroffers-title{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ouroffers-parent{
+	display: flex;
+	gap: 10px;
+}
+
+.ouroffers-child
+{
+	background-color: #fff;
+	width: 33%;
+	text-align: center;
+}
+
+.ouroffers-child .bg-img{
+	height: 180px;
+	margin-bottom: 40px;
+}
+
+.img1{
+	background-image: url("https://images.yummy.ph/yummy/uploads/2017/04/beef-sausage-stew-1.jpg");
+}
+
+.img2{
+	background-image: url("https://data.thefeedfeed.com/static/2019/12/23/15771169865e00e53a74f92.jpg");
+}
+
+.img3{
+	background-image: url("https://hildaskitchenblog.com/wp-content/uploads/2022/02/smoked-beef-ribs-on-the-grill-square-2.jpg");
+}
+
+.ouroffer-child-text h5{
+	font-size: 16px;
+	color: #FEB941;
+	margin-bottom: 10px;
+}
+
+.ouroffer-child-text h4{
+	font-size: 19px;
+	margin-bottom: 10px;
+}
+
+.ouroffer-child-text p{
+	font-size: 14px;
+	margin: 0 35px 25px;
+}
+
+.ouroffer-child-text a{
+	background-color: #FEB941;
+	color: #fff;
+	padding: 10px 20px;
+	margin-bottom: 40px;
+}
+/*----------------------------------*/
+
+/*Gallery Section-------------------*/
+.gallery-title{
+	text-align: center;
+}
+
+.gallery-parent{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+}
+
+.gallery-parent div{
+	padding: 10px;
+	width: 250px;
+	height: 200px;
+}
+
+.gallery-parent a{
+	display: inline-block;
+}
+
+.gallery-parent .bg-img{
+	padding: 20px;
+	max-width: 350px;
+	max-height: 250px;
+}
+/*----------------------------------*/
+
+/*Page Footer-----------------------*/
+.page-footer{
+	padding: 100px 0;
+	background-color: #31363F;
+	color: #fff;
+}
+
+.page-footer h5{
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.footer-ul li{
+	margin-bottom: 15px;
+}
+
+.footer-parent{
+	display: flex;
+	gap: 80px;
+	margin-bottom: 40px;
+}
+
+.footer-about-child{
+	width: 35%;
+}
+
+.footer-resto-child{
+	width: 25%;
+}
+
+.footer-links-child{
+	width: 20%;
+}
+
+.footer-icons-parent{
+	max-width: 140px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px; 
+	display: flex;
+	gap: 15px;
+}
+
+.footer-icons-parent i{
+	padding: 10px;
+	border-radius: 20px;
+	background-color: #344955;
+	font-size: 25px;
+	color: #B3C8CF;
+}
+
+.footer-copyright{
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 580px;
+}
+/*----------------------------------*/
+
+/*Responsive------------------------*/
+@media only screen and (max-width: 992px){
+	section{
+		padding: 80px 0;
+	}
+
+	p{
+		margin-bottom: 15px;
+	}
+
+	/*Header----------------------------*/
+	.header-parent{
+		height: 70px;
+	}
+
+	.header-child-menu ul{
+		gap: 15px;
+	}
+	/*----------------------------------*/
+
+	/*Main Banner-----------------------*/
+	.main-banner-text h1{
+		font-size: 40px;
+	}
+
+	.main-banner-text p{
+		margin: 15px 0 30px;
+	}
+	/*----------------------------------*/
+
+	/*Our Story Section-----------------*/
+	.ourstory-sec{
+		padding: 90px 0;
+	}
+
+	.ourstory-parent{
+		gap: 70px;
+	}
+	/*----------------------------------*/
+
+	/*Our Offers Section----------------*/
+	.ouroffers-child .bg-img{
+		margin-bottom: 30px;
+	}
+
+	.ouroffer-child-text h4{
+		font-size: 18px;
+	}
+	/*----------------------------------*/
+
+	/*Gallery Section-------------------*/
+	.gallery{
+		padding: 100px 0;
+		padding-bottom: 200px;
+	}
+
+	.gallery-parent img{
+		/*width: 250px;
+		height: 200px;*/
+	}
+	/*----------------------------------*/
+
+	/*Page Footer-----------------------*/
+	.page-footer{
+		padding: 80px 0;
+	}
+
+	.page-footer h5{
+		margin-bottom: 15px;
+	}
+
+	.footer-ul li{
+		margin-bottom: 13px;
+	}
+
+	.footer-parent{
+		gap: 40px;
+		margin-bottom: 30px;
+	}
+
+	.footer-icons-parent i{
+		font-size: 23px;
+	}
+}
+/*----------------------------------*/
+
+/*----------------------------------*/
+@media only screen and (max-width: 768px){
+	section{
+		padding: 50px 0;
+	}
+
+	/*General CSS-----------------------*/
+	.ourstory-child-text h2,
+	.ouroffers-title h2{
+		font-size: 18px;
+		letter-spacing: 2px;
+	}
+
+	.ourstory-child-text h3,
+	.ouroffers-title h3,
+	.gallery-title h3{
+		font-size: 40px;
+	}
+	/*----------------------------------*/
+
+	/*Header----------------------------*/
+	.header-parent{
+		height: 50px;
+	}
+
+	.burger-menu{
+		display: block;
+	}
+
+	.header-child-menu{
+		display: none;
+	}
+	/*----------------------------------*/
+
+	/*Main Banner-----------------------*/
+	.main-banner-sec{
+		padding: 110px 0;
+	}
+
+	.main-banner-text h1{
+		font-size: 35px;
+	}
+
+	.main-banner-text p{
+		font-size: 16px;
+		margin: 10px 0 20px;
+	}
+
+	.main-banner-text a{
+		padding: 10px 20px;
+	}
+	/*----------------------------------*/
+
+	/*Our Story Section-----------------*/
+	.ourstory-sec{
+		padding: 70px 0;
+		text-align: center;
+	}
+
+	.ourstory-parent{
+		flex-direction: column;
+		gap: 50px;
+	}
+
+	.ourstory-child-text{
+		width: 100%;
+	}
+
+	.ourstory-child-img{
+		width: 100%;
+		height: 250px;
+	}
+	/*----------------------------------*/
+
+	/*Our Offers Section----------------*/
+	.ouroffers-parent{
+		flex-direction: column;
+	}
+
+	.ouroffers-child
+	{
+		width: 100%;
+	}
+
+	.ouroffers-child .bg-img{
+		margin-bottom: 20px;
+	}
+	/*----------------------------------*/
+
+	/*Gallery Section-------------------*/
+	.gallery-parent{
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.gallery-parent .bg-img{
+		width: 200px;
+		height: 150px;
+	}
+	/*----------------------------------*/
+
+	/*Page Footer-----------------------*/
+	.page-footer{
+		padding: 60px 0;
+	}
+
+	.page-footer h5{
+		margin-bottom: 10px;
+	}
+
+	.footer-ul li{
+		margin-bottom: 10px;
+	}
+
+	.footer-parent{
+		gap: 20px;
+		margin-bottom: 20px;
+	}
+
+	.footer-icons-parent i{
+		font-size: 20px;
+	}
+
+	.footer-copyright{
+		max-width: 320px;
+		text-align: center;
+		font-size: 14px;
+	}
+	/*----------------------------------*/
+}
+/*----------------------------------*/
+
+/*----------------------------------*/
+@media only screen and (max-width: 576px){
+	section{
+		padding: 30px 0;
+	}
+
+	/*General CSS-----------------------*/
+	.ourstory-child-text h2,
+	.ouroffers-title h2{
+		font-size: 17px;
+		letter-spacing: 1px;
+	}
+
+	.ourstory-child-text h3,
+	.ouroffers-title h3,
+	.gallery-title h3{
+		font-size: 35px;
+	}
+	/*----------------------------------*/
+
+	/*Header----------------------------*/
+	/*----------------------------------*/
+
+	/*Main Banner-----------------------*/
+	.main-banner-sec{
+		padding: 90px 0;
+	}
+
+	.main-banner-text h1{
+		font-size: 30px;
+	}
+
+	.main-banner-text a{
+		font-size: 15px;
+		padding: 10px 20px;
+	}
+	/*----------------------------------*/
+
+	/*Our Story Section-----------------*/
+	.ourstory-sec{
+		padding: 50px 0;
+	}
+
+	.ourstory-parent{
+		gap: 30px;
+	}
+
+	.ourstory-child-img{
+		height: 200px;
+	}
+	/*----------------------------------*/
+
+	/*Our Offers Section----------------*/
+	/*----------------------------------*/
+
+	/*Gallery Section-------------------*/
+
+	/*----------------------------------*/
+
+	/*Page Footer-----------------------*/
+	.page-footer{
+		padding: 40px 0;
+	}
+
+	.footer-parent{
+		text-align: center;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.footer-about-child{
+		width: 100%;
+	}
+
+	.footer-resto-child{
+		width: 100%;
+	}
+
+	.footer-links-child{
+		width: 100%;
+	}
+	/*----------------------------------*/
+}
+/*----------------------------------*/
+
+/*----------------------------------*/
+@media only screen and (max-width: 480px){
+}
+/*----------------------------------*/

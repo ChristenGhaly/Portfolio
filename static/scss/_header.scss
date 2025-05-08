@@ -1,0 +1,76 @@
+@import "variables";
+
+// Header
+header{
+	background-color: $header-bg-color;
+
+	h1{
+		padding: 20px;
+		padding-bottom: 10px;
+		font-family: $dance-font;
+		font-size: 40px;
+		color: $header-text-color;
+		text-align: center;
+	}
+
+	p{
+		padding-bottom: 10px;
+		color: aqua;
+		text-shadow: 1px 1px 1px #000;
+		text-align: right;
+	}
+
+	.side-menu{
+		padding-left: 10px;
+		padding-right: 15px;
+		background-color: $side-menu-bg-color;
+		height: 100vh;
+		position: fixed;
+		left: 0;
+		top: 0;
+		text-align: center;
+		z-index: 100;
+
+		li{
+			margin: 25px 0;
+			border: 1px solid #555;
+			border-radius: 5px;
+			padding: 10px;
+		
+			@keyframes colorChange {
+				0% { color: red; }
+				25% { color: blue; }
+				50% { color: green; }
+				75% { color: orange; }
+				100% { color: red; }
+			}
+
+			i{
+				position: relative;
+				font-size: 30px;
+				color: #fff;
+
+				span{
+					display: none;
+					position: absolute;
+					top: 130%;
+					left: 50%;
+					transform: translateX(-50%);
+					padding-top: 10px;
+					font-size: 10px;
+					// text-transform: capitalize;
+				}
+
+				&:hover{
+					color: aqua;
+					span{
+						display: inline-block;
+					}
+					// animation: colorChange 2s infinite;
+				}
+			}
+
+			
+		}
+	}
+}

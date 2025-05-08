@@ -1,0 +1,282 @@
+/*Christen - Assignment 01 - BootStarp*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container{
+/*	width: 90%;*/
+	max-width: 1000px;
+}
+
+body{
+/*	font-family: "Times New Romans";*/
+	font-family: "PT Serif", serif;
+	overflow-x: hidden;
+}
+
+/*Header-----------------------*/
+nav img{
+	width: 60px;
+}
+/*-----------------------------*/
+
+/*Main Banner Section----------*/
+.main-banner{
+	padding: 200px 0;
+	background: url("https://i3.wp.com/wallpapers.com/images/hd/law-background-kixvewcokawjd0nx.jpg");
+	background-position: center;
+	background-size: cover;
+	background-color: rgba(0, 0, 0, 50%);
+	background-blend-mode: overlay;
+	position: relative;
+}
+
+.main-banner h1{
+	font-size: 70px;
+}
+
+.main-banner p{
+	max-width: 550px;
+}
+
+.main-banner h1{
+	transition: 1s;
+	animation: 2s h1-anim;
+}
+
+@keyframes h1-anim{
+	0%{
+		color: #fff;
+		transform: translateY(0);	
+	}
+
+	50%{
+		color: #DC5F00;
+		text-shadow: 5px 5px 10px gray;
+		transform: translateY(-20px);
+	}
+
+	100%{
+		color: #fff;
+		transform: translateY(0);
+	}
+}
+
+.anim-div{
+	background: url("https://media.istockphoto.com/id/480419149/vector/law-or-layer-seal.jpg?s=612x612&w=0&k=20&c=3weLu5F2K_y1ryAkIQaQOtjXshaWISjjKCooGXaU8iI=");
+	background-size: cover;
+	background-position: center;
+	border-radius: 100px;
+	height: 80px;
+	width: 80px;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	z-index: 100;
+	animation: 2s div-anim infinite;
+	transition: 1s;
+}
+
+@keyframes div-anim{
+	0%{
+		transform: rotate(0);
+	}
+
+	25%{
+		transform: rotate(45deg);
+	}
+
+	50%{
+		transform: rotate(-45deg);
+	}
+
+	75%{
+		transform: rotate(45deg);
+	}
+
+	100%{
+		transform: rotate(0);
+	}
+}
+/*-----------------------------
+
+/*History Section--------------*/
+.history-sec-img{
+	background: url("https://zenkit.com/wp-content/uploads/2018/10/team-meeting-1.jpeg");
+	background-size: cover;
+	background-position: center;
+	height: 400px;
+	z-index: 50;
+}
+
+.history-sec-txt h2{
+	color: #2A629A;
+}
+/*-----------------------------*/
+
+/*Call to action Banner--------*/
+.call-action-banner{
+	padding: 60px 0;
+	background: url("https://png.pngtree.com/background/20230519/original/pngtree-view-from-one-side-of-business-towers-in-a-modern-business-picture-image_2653142.jpg");
+	background-size: cover;
+	background-position: center;
+	background-color: rgba(0, 0, 0, 50%);
+	background-blend-mode: overlay;
+	position: relative;
+}
+
+/*Animation-------------------*/
+.shine-line{
+	width: 300px;
+	height: 1px;
+	rotate: 90deg;
+	position: absolute;
+	animation: 2s line-anim infinite;
+}
+
+.shine-line1{
+	bottom: 0;
+	left: -100px;
+	animation: 2s line-anim infinite;
+}
+
+.shine-line2{
+	top: 0;
+	left: 0;
+	animation: 3s line-anim infinite;
+}
+
+.shine-line3{
+	bottom: 0;
+	right: 0;
+	animation: 2s line-anim infinite;
+}
+
+.shine-line4{
+	top: 0;
+	right: -100px;
+	animation: 3s line-anim infinite;
+}
+
+.shine-line5{
+	bottom: 0;
+	left: 50px;
+	animation: 2s line-anim infinite;
+}
+
+.shine-line6{
+	top: 0;
+	left: 150px;
+	animation: 3s line-anim infinite;
+}
+
+.shine-line7{
+	bottom: 0;
+	right: 100px;
+	animation: 2s line-anim infinite;
+}
+
+.shine-line8{
+	top: 0;
+	right: 150px;
+	animation: 3s line-anim infinite;
+}
+
+@keyframes line-anim{
+	0%{
+		transform: scale(0);
+	}
+
+	50%{
+		transform: scale(1);
+	}
+
+	100%{
+		transform: scale(0);
+	}
+}
+/*-----------------------------*/
+
+/*Practice Areas Section-------*/
+.practice-sec img{
+	height: 60px;
+}
+
+.card-div-img:hover{
+	transition: 1s;
+	animation: 1s card-img-anim infinite;
+}
+
+@keyframes card-img-anim{
+	0%{
+		padding: 0;
+		border: 0;
+		transform: rotate(0);
+	}
+
+	25%{
+		padding: 8px;
+		border: 1px solid gray;
+		border-radius: 60px;
+		transform: rotate(45deg);
+	}
+
+	75%{
+		padding: 8px;
+		border: 1px solid gray;
+		border-radius: 60px;
+		transform: rotate(-45deg);
+	}
+
+	100%{
+		padding: 0;
+		border: 0;
+		transform: rotate(0);
+	}
+
+}
+/*-----------------------------*/
+
+/*Responsive-----------------------*/
+@media only screen and (max-width:768px){
+	/*Main Banner Section----------*/
+	.main-banner{
+		padding: 90px 0;
+	}
+
+	.main-banner h1{
+		font-size: 50px;
+	}
+
+	.main-banner p{
+		max-width: 450px;
+	}
+	/*-----------------------------*/
+	/*History Section--------------*/
+	.history-sec-img{
+		height: 300px;
+	}
+	/*-----------------------------*/
+}
+
+@media only screen and (max-width:576px){
+	/*Main Banner Section----------*/
+	.main-banner h1{
+		font-size: 35px;
+	}
+	/*-----------------------------*/
+	/*History Section--------------*/
+	.history-sec-img{
+		height: 250px;
+	}
+	/*-----------------------------*/
+
+	/*Practice Areas Section-------*/
+	.practice-sec p{
+		font-size: 15px;
+	}
+	/*-----------------------------*/
+}
+/*---------------------------------*/

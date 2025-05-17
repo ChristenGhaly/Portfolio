@@ -1,10 +1,7 @@
 @import "variables";
 
 .skills-banner{
-    padding: 200px 0;
-    background-image: $skills-banner-img;
-    background-position: center;
-    background-size: cover;
+    @include page-banner-style($skills-banner-img);
 
     .banner-text{
         h2{
@@ -14,9 +11,170 @@
 }
 
 .skills-sec{
-    background-image: $skills-bg-img;
-    background-color: rgba(0, 0, 0, 60%);
-    background-blend-mode: overlay;
-    background-position: center;
-    background-size: cover;
+    @include page-bg-style($skills-bg-img);
+
+    .category{
+        margin-bottom: 8rem;
+
+        h4{
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .skill-title-flex{
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+
+            .title-hr{
+                width: 25%;
+
+                hr{
+                    width: 100%;
+                }
+            }
+
+            .title{
+                width: 50%;
+
+                h3{
+                    font-size: 2rem;
+                    text-align: center;
+                    color: $header-text-color;
+                }
+            }
+        }
+
+        .skills-grid{
+            display: grid;
+            // grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .skill{
+            padding: 20px;
+            box-shadow: 0.2rem 0.2rem 0.2rem #666;
+            background-image: $texture-bg;
+            color: $dark-text-color;
+            
+            .skill-content{
+                display: flex;
+                gap: 20px;
+                // justify-content: center;
+                align-items: center;
+
+                img{
+                    display: inline-block;
+                    margin-right: 0.5rem;
+                    height: 50px;
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    .category:last-child{
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: $large-size){
+    .skills-sec{
+
+        .category{
+            margin-bottom: 5rem;
+
+            .skill-title-flex{
+                margin-bottom: 30px;
+
+                .title{
+
+                    h3{
+                        font-size: 1.7rem;
+                    }
+                }
+            }
+
+            .skills-grid{
+                grid-gap: 15px;
+                margin-bottom: 40px;
+            }
+
+            .skill{
+                padding: 15px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $medium-size){
+    .skills-sec{
+        .category{
+            margin-bottom: 4rem;
+
+            h4{
+                font-size: 1rem;
+            }
+
+            .skill-title-flex{
+                .title-hr{
+                    width: 15%;
+                }
+                .title{
+                    width: 70%;
+
+                    h3{
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+
+            .skills-grid{
+                grid-gap: 10px;
+                margin-bottom: 30px;
+            }
+
+            .skill{
+                padding: 10px;
+
+                .skill-content{
+                    img{
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $small-size){
+
+}
+
+@media only screen and (max-width: $phone-size){
+    .skills-sec{
+        .category{
+            h4{
+                font-size: 0.8rem;
+            }
+
+            .skill-title-flex{
+                .title-hr{
+                    display: none;
+                }
+
+                .title{
+                    width: 100%;
+                }
+            }
+
+            .skills-grid{
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
 }

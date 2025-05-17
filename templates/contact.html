@@ -6,7 +6,51 @@
 <section class="contact-banner">
     <div class="container">
         <div class="banner-text">
-            <h2>Contact</h2>
+            <h2><i class="fa-solid fa-phone"></i>Contact Me</h2>
+        </div>
+    </div>
+</section>
+
+<section class="contact-sec">
+    <div class="container">
+        <div class="contact-flex">
+            <div class="info-child">
+                <hr>
+                <h3><i class="fa-solid fa-phone"></i>(438) 885-8611</h3>
+                <hr>
+                <h3><a href="mailto: christen.srghaly@yahoo.com"><i class="fa-solid fa-envelope"></i>christen.srghaly@yahoo.com</a></h3>
+                <hr>
+                <h3><i class="fa-solid fa-map-location-dot"></i>Montreal, QC, Canada</h3>
+                <hr>
+                <h3><a href="https://www.linkedin.com/in/christen-ghaly/" target="_blank"><i class="fa-brands fa-linkedin"></i>Christen Ghaly</a></h3>
+                <hr>
+            </div>
+
+            <div class="form-child">
+                <form method="POST" action="/contact">
+                    <div>
+                        <label for="full-name">Full Name:</label>
+                        <input type="text" name="full-name" placeholder="Full Name" required>
+                    </div>
+
+                    <div>
+                        <label for="email">Email address:</label>
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+
+                    <div>
+                        <label for="subject">Subject:</label>
+                        <input type="text" name="subject" placeholder="Subject" required>
+                    </div>
+
+                    <div>
+                        <label for="message">Question / Comment:</label>
+                        <textarea name="message" placeholder="Your message" required></textarea>
+                    </div>
+                    
+                    <button type="submit">Send</button>
+                </form>
+            </div>
         </div>
     </div>
 </section>

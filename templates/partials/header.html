@@ -1,29 +1,70 @@
 {{define "header"}}
 <header id="header">
-    <div class="container">
-        <div class="content">
-            <div class="name">
-                <h1><a href="index.html">{ Christen Ghaly; }</a></h1>
-                <p>Full-Stack Web Developer</p>
+    <div class="main-menu">
+        <div class="menu-flex">
+            <div class="logo-flex">
+                <div class="logo-img">
+                    <a href="/index"><img src="/static/img/header/logo.svg" alt=""></a>
+                </div>
+                <div class="logo-text">
+                    <h1><a href="/index">Christen Ghaly</a></h1>
+                    <p>Full-Stack Web Developer</p>
+                </div>
             </div>
 
-            <div class="side-menu">
-                <ul class="d-flex justify-content-center align-items-center gap-5 d-s-none">	
-                    <li><a href="index"><i class="fa-solid fa-house-chimney-window"><span>home</span></i></a></li>
+            <div class="burger-btn" id="burger-btn-id">
+                <button><i class="fa-solid fa-bars"></i></button>
+            </div>
 
-                    <li><a href="/about"><i class="fa-solid fa-address-card"><span>about</span></i></a></li>
+            <div class="burger-menu" id="burger-menu-id">
+                <button id="burger-close-btn-id">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+                <ul>	
+                    <li><a href="index"><i class="fa-solid fa-house-chimney-window"></i><span>home</span></a></li>
                     
-                    <li><a href="/projects"><i class="fa-solid fa-list-check"><span>projects</span></i></a></li>
+                    <li><a href="/about"><i class="fa-solid fa-address-card"></i><span>about</span></a></li>
                     
-                    <li><a href="/skills"><i class="fa-solid fa-gears"><span>Skills</span></i></a></li>
+                    <li><a href="/projects"><i class="fa-solid fa-list-check"></i><span>projects</span></a></li>
                     
-                    <li><a href="/experiences"><i class="fa-solid fa-user-plus"><span>Experiences</span></i></a></li>
+                    <li><a href="/skills"><i class="fa-solid fa-gears"></i><span>skills</span></a></li>
                     
-                    <li><a href="https://www.linkedin.com/in/christen-ghaly/" target="_blank"><i class="fa-brands fa-linkedin-in"><span>linkedin</span></i></a></li>
-
-                    <li><a href="/contact"><i class="fa-solid fa-phone"><span>contact</span></i></a></li>
+                    <li><a href="/experiences"><i class="fa-solid fa-user-plus"></i><span>experience</span></a></li>
+                    
+                    <li><a href="/contact"><i class="fa-solid fa-phone"></i><span>contact</span></a></li>
+                    
+                    <li><a href="https://www.linkedin.com/in/christen-ghaly/" target="_blank"><i class="fa-brands fa-linkedin-in"></i><span>linkedin</span></a></li>
                 </ul>
             </div>
+
+            <ul class="menu">
+                <li><a href="index">home</a></li>
+                <li><a href="/about">about</a></li>
+                <li><a href="/projects">projects</a></li>
+                <li><a href="/skills">skills</a></li>
+                <li><a href="/experiences">experience</a></li>
+                <li><a href="/contact">contact</span></i></a></li>
+                <li><button><a href="https://www.linkedin.com/in/christen-ghaly/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></button></li>
+                <li><button><a href="mailto: christen.srghaly@yahoo.com">Get In Touch</a></button></li>
+            </ul>
+        </div>
+
+        <div class="side-menu">
+            <ul class="d-flex justify-content-center align-items-center gap-5 d-s-none">	
+                <li><a href="index"><i class="fa-solid fa-house-chimney-window"><span>home</span></i></a></li>
+
+                <li><a href="/about"><i class="fa-solid fa-address-card"><span>about</span></i></a></li>
+                
+                <li><a href="/projects"><i class="fa-solid fa-list-check"><span>projects</span></i></a></li>
+                
+                <li><a href="/skills"><i class="fa-solid fa-gears"><span>skills</span></i></a></li>
+                
+                <li><a href="/experiences"><i class="fa-solid fa-user-plus"><span>experience</span></i></a></li>
+                
+                <li><a href="/contact"><i class="fa-solid fa-phone"><span>contact</span></i></a></li>
+                
+                <li><a href="https://www.linkedin.com/in/christen-ghaly/" target="_blank"><i class="fa-brands fa-linkedin-in"><span>linkedin</span></i></a></li>
+            </ul>
         </div>
     </div>
 </header>

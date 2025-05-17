@@ -1,14 +1,156 @@
 @import "variables";
 
 .contact-banner{
-    padding: 200px 0;
-    background-image: $contact-banner-img;
-    background-position: center;
-    background-size: cover;
+    @include page-banner-style($contact-banner-img);
 
     .banner-text{
         h2{
             @include page-title-style;
         }
     }   
+}
+
+.contact-sec{
+    @include page-bg-style();
+
+    .contact-flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        // background-color: #3D365C;
+
+        .info-child{
+            width: 40%;
+            color: aqua;
+
+            h3{
+                font-weight: 400;
+            }
+
+            i{
+                margin-right: 2rem;
+            }
+
+            hr{
+                margin: 20px auto;
+                opacity: 50%;
+                box-shadow: 0.1rem 0.1rem 0.1rem #fff;
+            }
+        }
+
+        .form-child{
+            width: 60%;
+
+            form{
+                padding: 50px;
+                border: 2px solid #fff;
+                background-color: rgba($color: aqua, $alpha: 60%);
+                background-blend-mode: overlay;
+
+                div{
+                    margin: 20px 0;
+                }
+
+                label{
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    color: $dark-text-color;
+                }
+
+                input, textarea{
+                    display: block;
+                    margin-top: 0.4rem;
+                    padding: 0.5rem;
+                    width: 100%;
+                    border-radius: 0.5rem;
+                    color: #183B4E;
+                    font-size: 1rem;
+                }
+
+                button{
+                    padding: 0.5rem 2rem;
+                    font-size: 1.2rem;
+                    color: #fff;
+
+                    &:hover{
+                        font-weight: 700;
+                        color: $dark-text-color;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 992px){
+    .contact-sec{
+        .contact-flex{
+            gap: 30px;
+
+            .info-child{
+                h3{
+                    font-size: 1rem;
+                }
+
+                i{
+                    margin-right: 1rem;
+                }
+            }
+
+            .form-child{
+                form{
+                    padding: 20px;
+
+                    label{
+                        font-size: 1rem;
+                        font-weight: 600;
+                    }
+
+                    input, textarea{
+                        border-radius: 0.3rem;
+                        font-size: 0.8rem;
+                    }
+
+                    button{
+                        padding: 0.5rem 2rem;
+                        border-radius: 0.3rem;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .contact-sec{
+        .contact-flex{
+            flex-direction: column-reverse;
+
+            .info-child{
+                width: 100%;
+                h3{
+                    margin: 20px 0;
+                }
+
+                hr{
+                    display: none;
+                }
+            }
+
+            .form-child{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 576px){
+
+}
+
+@media only screen and (max-width: 480px){
+
 }

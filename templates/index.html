@@ -3,10 +3,10 @@
 {{end}}
 
 {{define "content"}}
-<section class="banner">
+<section class="main-banner">
     <div class="container">
         <div class="banner-text">
-            <button><a href="contact.html">Contact me <i class="fa-solid fa-envelope-open-text"></i></a></button>
+            
         </div> 
         <div class="tools-flex">
             <div class="hexagon">
@@ -67,58 +67,96 @@
             <div class="hexagon">
                 <img src="/static/img/index/icons/elementor.svg" alt="elementor">
             </div>
+            <div class="hexagon">
+                <img src="/static/img/index/icons/php.svg" alt="php">
+            </div>
+            <div class="hexagon">
+                <img src="/static/img/index/icons/flask.svg" alt="flask">
+            </div>
         </div>
     </div>
 </section>
 
-<section class="projects">
-    <div class="container">
-        <div class="projects-grid">
-            
-            <div class="project-card">
-                <div class="project-title"><h2>HTML / CSS / AOS / JS</h2></div>
-                <div class="project-flex">
-                    <div class="project-text">
-
-                    </div>
-                    <div class="project-img">
-                        <a href="/static/projects/p1/index.html" target="_blank">
-                            <img src="/static/img/projects/ricardo/ricardo-screenshot.png" alt="">
-                        </a>
-                    </div>    
+<section class="main-sec">
+    <div class="div-margin-bottom about">
+        <div class="container">
+            <div class="about-flex" data-aos="fade-up">
+                <div class="about-img">
+                    <img src="/static/img/index/about-img.avif" alt="">
                 </div>
-            </div>
 
-            <div class="project-card">
-                <div class="project-title"><h2>WordPress</h2></div>
-                <div class="project-flex">
-                    <div class="project-text">
-
-                    </div>
-                    <div class="project-img">
-                        <a href="/static/projects/p2/index.html" target="_blank">
-                            <img src="/static/img/projects/homedecor/homedecor-screenshot.png" alt="">
-                        </a>
-                    </div>    
+                <div class="about-text">
+                    <p><img src="/static/img/index/icons/w.svg" alt="">elcome to my portfolio. I’m excited to share my work with you. I specialize in designing and developing elegant, functional websites that make a lasting impact. Please take a moment to explore my projects, and if you’re looking to elevate your online presence, let’s discuss how we can collaborate to create something exceptional. Thank you for visiting.</p>
+                    <button><a href="/about">Read More<i class="fa-solid fa-ellipsis"></i></a></button>
                 </div>
-            </div>
-
-            <div class="project-card">
-                <a href="/static/projects/p3/index.html" target="_blank">
-                    <img src="/static/img/projects/law/law-screenshot.png" alt="">
-                </a>
-            </div>
-
-            <div class="project-card">
-                <a href="/static/projects/p4/index.html" target="_blank">
-                    <img src="/static/img/projects/eatwell/eatwell-screenshot.png" alt="">
-                </a>
             </div>
         </div>
+    </div>
 
-        <button>
-            <a href="projects.html">More Projects</a>
-        </button>
+    <div class="div-margin-bottom projects">
+        <div class="container">
+            <div class="slides">
+                <div class="slide">
+                    <img src="/static/img/projects/homedecor/homedecor-screenshot.png" alt="">
+                </div>
+
+                <div class="slide">
+                    <img src="/static/img/projects/ricardo/ricardo-screenshot.png" alt="">
+                </div>
+
+                <div class="slide">
+                    <img src="/static/img/projects/law/law-screenshot.png" alt="">
+                </div>
+
+                <div class="slide">
+                    <img src="/static/img/projects/eatwell/eatwell-screenshot.png" alt="">
+                </div>
+            </div>
+
+            <div class="projects-btn">
+                <button class="more-projects-btn"><a href="/projects">More Projects</a></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="div-margin-bottom contact">
+        <div class="container">
+            <div class="cta-content">
+                <p>Let’s build something great together</p>
+                <button><a href="/contact">Contact me <i class="fa-solid fa-envelope-open-text"></i></a></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="experience">
+        <div class="container">
+            <div class="grid">
+                <div class="card">
+                    <div class="wire"></div>
+                    <div class="text">
+                        <p><i class="fa-solid fa-i"></i>specialize in building responsive, user-focused websites that are both functional and visually engaging. Using HTML, CSS, JavaScript, and frameworks like React, Bootstrap, and SASS, I develop clean interfaces optimized for all devices.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="wire"></div>
+                    <div class="text">
+                        <p><i class="fa-solid fa-i"></i>also work with backend tools like Django and Golang, and I manage data with SQLite3. From wireframes to deployment, I’m comfortable with the full development stack and use Git for efficient version control.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="wire"></div>
+                    <div class="text">
+                        <p><i class="fa-solid fa-w"></i>ith a background in multimedia and animation, I bring creativity and visual storytelling into my code. I aim to create meaningful, engaging web experiences—and I’m always learning new tools to improve my work.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experiences-btn">
+                <button><a href="/experiences">Education & Experiences</a></button>
+            </div>
+        </div>
     </div>
 </section>
 {{end}}

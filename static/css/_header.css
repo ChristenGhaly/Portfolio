@@ -1,0 +1,230 @@
+header {
+  background-color: #3D365C;
+  border-bottom: 1px solid wheat;
+}
+header .main-menu {
+  max-width: 1400px;
+}
+header .main-menu .menu-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+}
+header .main-menu .menu-flex .logo {
+  width: 40%;
+}
+header .main-menu .menu-flex .logo h1 {
+  padding: 10px;
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+  color: #FBF3C1;
+  text-align: center;
+}
+header .main-menu .menu-flex .logo p {
+  padding-bottom: 10px;
+  color: #F3C623;
+  text-shadow: 1px 1px 1px #000;
+  text-align: right;
+}
+header .main-menu .menu-flex .burger-menu {
+  display: none;
+}
+header .main-menu .menu-flex .burger-menu button {
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  color: aqua;
+}
+header .main-menu .menu-flex .burger-menu button i {
+  margin: 0;
+}
+header .main-menu .menu-flex .burger-menu button:hover {
+  color: #183B4E;
+}
+header .main-menu .menu-flex .menu {
+  width: 60%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  text-align: center;
+  text-transform: capitalize;
+}
+header .main-menu .menu-flex .menu li i {
+  margin: 0;
+}
+header .main-menu .menu-flex .menu li button {
+  padding: 3px 5px;
+  font-size: 1rem;
+}
+header .main-menu .menu-flex .menu li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: wheat;
+}
+header .side-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  padding-left: 10px;
+  padding-right: 15px;
+  background-color: aqua;
+  text-align: center;
+  z-index: 100;
+  -webkit-transform: translateX(-90%);
+          transform: translateX(-90%);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+header .side-menu li {
+  margin: 25px 0;
+  border: 1px solid #555;
+  border-radius: 5px;
+  padding: 10px;
+}
+@-webkit-keyframes colorChange {
+  0% {
+    color: red;
+  }
+  25% {
+    color: blue;
+  }
+  50% {
+    color: green;
+  }
+  75% {
+    color: orange;
+  }
+  100% {
+    color: red;
+  }
+}
+@keyframes colorChange {
+  0% {
+    color: red;
+  }
+  25% {
+    color: blue;
+  }
+  50% {
+    color: green;
+  }
+  75% {
+    color: orange;
+  }
+  100% {
+    color: red;
+  }
+}
+header .side-menu li i {
+  position: relative;
+  font-size: 30px;
+  color: #183B4E;
+}
+header .side-menu li i span {
+  display: none;
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding-top: 10px;
+  font-size: 10px;
+}
+header .side-menu li i:hover {
+  color: aqua;
+}
+header .side-menu li i:hover span {
+  display: inline-block;
+}
+header .side-menu:hover {
+  background-color: #333;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+header .side-menu:hover i {
+  color: #fff;
+}
+
+@media only screen and (max-width: 992px) {
+  header .main-menu {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-right: 10px;
+  }
+  header .main-menu .menu-flex {
+    gap: 30px;
+  }
+  header .main-menu .menu-flex .logo h1 {
+    font-size: 1.5rem;
+  }
+  header .main-menu .menu-flex .logo p {
+    font-size: 0.8rem;
+  }
+  header .main-menu .menu-flex .menu {
+    padding: 5px 0;
+  }
+  header .main-menu .menu-flex .menu li {
+    font-size: 0.9rem;
+  }
+  header .main-menu .menu-flex .menu li button {
+    font-size: 0.7rem;
+  }
+  header .side-menu {
+    padding-left: 5px;
+    padding-right: 10px;
+  }
+  header .side-menu li i {
+    font-size: 1.3rem;
+  }
+  header .side-menu li i span {
+    font-size: 8px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header .main-menu {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  header .main-menu .menu-flex {
+    gap: 30px;
+  }
+  header .main-menu .menu-flex .logo h1 {
+    font-size: 1.5rem;
+  }
+  header .main-menu .menu-flex .logo p {
+    font-size: 0.8rem;
+  }
+  header .main-menu .menu-flex .burger-menu {
+    display: block;
+  }
+  header .main-menu .menu-flex .menu {
+    display: none;
+  }
+  header .side-menu {
+    padding-left: 5px;
+    padding-right: 10px;
+  }
+  header .side-menu li i {
+    font-size: 1.3rem;
+  }
+  header .side-menu li i span {
+    font-size: 8px;
+  }
+}

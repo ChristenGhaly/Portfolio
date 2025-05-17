@@ -1,12 +1,13 @@
 // Variables
 
 // Colors
-$page-bgcolor: #000;
-$header-bg-color: #780C28;
+$page-bg-color: #000;
+$header-bg-color: rgb(61, 54, 92);
 $header-text-color: #EAD196;
 $side-menu-bg-color: #333;
 
 $text-color: #fff;
+$dark-text-color: #183B4E;
 $text-hover-color: #F3C623;
 
 $cards-bg-color: #FAF8F1;
@@ -19,29 +20,201 @@ $footer-text-color: #000;
 $main-font: "Raleway", sans-serif;
 $dance-font: "Dancing Script", cursive;
 $name-font: "Roboto Slab", serif;
+$hand-font: "Handlee", cursive;
 
 // Images
 $main-banner-img: url("/static/img/index/main-banner.webp");
+$main-bg-img: url("/static/img/index/main-bg.webp");
+$texture-bg: url("/static/img/index/texture-bg.png");
+$cta-bg: url("/static/img/index/cta-bg.webp");
+$cta-bg2: url("/static/img/index/cta-bg2.webp");
+$cta-bg3: url("/static/img/index/cta-bg3.webp");
+
+$about-banner-img: url("/static/img/about/about-banner.webp");
+$about-bg-img: url("/static/img/about/about-bg.webp");
+
+$projects-banner-img: url("/static/img/projects/projects-banner.webp");
+$projects-bg-img: url("/static/img/projects/projects-bg.webp");
 
 $skills-banner-img: url("/static/img/skills/skills_banner.webp");
-$skills-bg-img: url("/static/img/skills/bg.jpg");
+$skills-bg-img: url("/static/img/skills/skills-bg.webp");
 
 $experiences-banner-img: url("/static/img/experiences/experiences-banner.webp");
-$experiences-bg-img: url("/static/img/experiences/bg.jpg");
+$experiences-bg-img: url("/static/img/experiences/experiences-bg.webp");
 
-$contact-banner-img: url("");
+$contact-banner-img: url("/static/img/contact/contact-banner.webp");
+$contact-bg-img: url("/static/img/contact/contact-bg.webp");
 
 // Animation
-$icon-anim: 10s rotate-anim ease-in-out infinite;
+$cta-anim: 30s change-bg-anim ease-in-out infinite;
+
+@keyframes change-bg-anim{
+    0%{
+        background-image: $cta-bg;
+    }
+    25%{
+        background-image: $cta-bg2;
+    }
+    50%{
+        background-image: $cta-bg3;
+        background-color: rgba(rgb(0, 0, 0), 50%);
+    }
+    75%{
+        background-image: $cta-bg2;
+    }
+    100%{
+        background-image: $cta-bg;
+    }
+}
+
+// Screen Sizes
+$phone-size: 480px;
+$small-size: 576px;
+$medium-size: 768px;
+$large-size: 992px;
+
+// Button Style
+@mixin btn-style{
+    padding: 0.5rem 3.5rem;
+	border: 2px solid aqua;
+	border-radius: 0.7rem;
+	background-color: #3D365C;
+	font-size: 1rem;
+
+	i{
+		margin-left: 0.7rem;
+	}
+
+	&:hover{
+		box-shadow: 2px 2px 10px #888;
+		background-color: aqua;
+        border: 2px solid #3D365C;
+		a{
+			color: #3D365C;
+		}
+	}
+
+	@media (max-width: $medium-size){
+		padding: 0.3rem 2.5rem;
+        border-radius: 0.5rem;
+        font-size: 0.9rem;
+	}
+
+    @media (max-width: $small-size){
+		padding: 0.3rem 1.5rem;
+        border-radius: 0.4rem;
+	}
+
+    @media (max-width: $phone-size){
+		padding: 0.3rem 1rem;
+        border-radius: 0.3rem;
+        font-size: 0.8rem;
+	}
+}
+
+// Page's Banner Style
+@mixin page-banner-style($banner-img: $main-banner-img){
+    position: relative;
+    padding: 200px 0;
+    background-image: $banner-img;
+    background-position: center;
+    background-size: cover;
+
+    @media (max-width: $large-size){
+        padding: 150px 0;
+    }
+
+    @media (max-width: $medium-size){
+        padding: 130px 0;
+    }
+
+    @media (max-width: $small-size){
+        padding: 110px 0;
+    }
+
+    @media (max-width: $phone-size){
+        padding: 100px 0;
+    }
+}
 
 // Page's Title Style
 @mixin page-title-style{
-    padding: 40px;
+    position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 40px 0;
+    width: 80%;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 30%);
     background-blend-mode: multiply;
     box-shadow: 2px 2px 100px #fff;
-    font-size: 75px;
+    font-size: 65px;
     text-align: center;
     color: aqua;
+
+    i{
+        margin-right: 2rem;
+        font-size: 70px;
+    }
+
+    @media (max-width: $large-size){
+        padding: 30px 0;
+        font-size: 55px;
+
+        i{
+            font-size: 55px;
+        }
+    }
+
+    @media (max-width: $medium-size){
+        padding: 25px 0;
+        font-size: 40px;
+
+        i{
+            font-size: 40px;
+        }
+    }
+
+    @media (max-width: $small-size){
+        padding: 20px 0;
+        font-size: 30px;
+
+        i{
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: $phone-size){
+        i{
+            margin-right: 1rem;
+        }
+    }
+}
+
+// Page's BG Style
+@mixin page-bg-style($page-bg-img: $experiences-bg-img){
+    padding-top: 13rem;
+    background-image: $page-bg-img;
+    background-color: rgba(0, 0, 0, 80%);
+    background-blend-mode: overlay;
+    background-position: center;
+    background-size: cover;
+
+    @media (max-width: $large-size){
+        padding-top: 11rem;
+    }
+
+    @media (max-width: $medium-size){
+        padding-top: 8rem;
+    }
+
+    @media (max-width: $small-size){
+        padding-top: 6rem;
+    }
+
+    @media (max-width: $phone-size){
+
+    }
 }

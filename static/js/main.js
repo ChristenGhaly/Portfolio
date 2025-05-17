@@ -1,10 +1,8 @@
-// import { initNavbar } from "./header";
+import { setupBurgerMenu } from "./burgermenu.js";
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     console.log("Website loaded!");
-//     initNavbar();
-//     initFooter();
-// });
+document.addEventListener('DOMContentLoaded', () => {
+    setupBurgerMenu("burger-btn-id", "burger-menu-id", "burger-close-btn-id");
+});
 
 // Slick Slider [Tools]
 $('.tools-flex').slick({
@@ -16,7 +14,55 @@ $('.tools-flex').slick({
     speed: 2000,
     slidesToShow: 8,
     slidesToScroll: 1,
-    cssEase: 'linear'
+    cssEase: 'linear',
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 5
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 4
+            }
+        }
+    ]
+});
+
+// Slick Slider [Projects]
+$('.slides').slick({
+    dots: true,
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+        {
+            breakpoint: 1100,
+            settings: {
+                centerPadding: '40px',
+                slidesToShow: 2
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                arrows: false,
+                centerPadding: '40px',
+                slidesToShow: 2
+            }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                arrows: false,
+                slidesToShow: 1
+            }
+        }
+    ]
 });
 
 // Initialize AOS

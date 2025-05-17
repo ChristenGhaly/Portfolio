@@ -3,33 +3,160 @@
 // Header
 header{
 	background-color: $header-bg-color;
+	border-bottom: 1px solid wheat;
 
-	h1{
-		padding: 20px;
-		padding-bottom: 10px;
-		font-family: $dance-font;
-		font-size: 40px;
-		color: $header-text-color;
-		text-align: center;
-	}
+	.main-menu{
+		max-width: 1300px;
+		margin: 0 auto;
+		.menu-flex{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 50px;
 
-	p{
-		padding-bottom: 10px;
-		color: aqua;
-		text-shadow: 1px 1px 1px #000;
-		text-align: right;
+			.logo-flex{
+				width: 40%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				.logo-img{
+					width: 20%;
+
+					img{
+						height: 5rem;
+					}
+				}
+
+				.logo-text{
+					width: 80%;
+					width: auto;
+
+					h1{
+						padding: 10px;
+						font-family: $dance-font;
+						font-size: 2rem;
+						color: aqua;
+					}
+
+					p{
+						padding-bottom: 10px;
+						color: #FBF3C1;
+						text-shadow: 1px 1px 1px #000;
+						text-align: center;
+					}
+				}
+			}
+
+			.burger-btn{
+				display: none;
+
+				button{
+					padding: 5px 10px;
+					font-size: 1.5rem;
+					color: aqua;
+					cursor: pointer;
+
+					i{
+						margin: 0;
+					}
+
+					&:hover{
+						color: #183B4E;
+					}
+				}
+			}
+
+			.burger-menu{
+				display: none;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100vw;
+				height: 100vh;
+				background-color: #000;
+				opacity: 95%;
+				padding: 20px 50px;
+				z-index: 200;
+
+				button{
+					all: unset;
+					margin-left: 90%;
+					opacity: 100%;
+					border-radius: 5px;
+					cursor: pointer;
+					
+					i{
+						border: 3px solid wheat;
+						border-radius: 2rem;
+						background-color: wheat;
+						font-size: 2.5rem;
+						color: #8E1616;
+					}
+				}
+
+				ul{
+					margin-top: 50px;
+					font-size: 1.3rem;
+
+					li{
+						padding: 10px 0;
+
+						i{
+							margin-right: 1rem;
+							padding: 10px;
+							border: 1px solid aqua;
+							border-radius: 5px;
+						}
+					}
+
+					span{
+						text-transform: capitalize;
+					}
+				}
+			}
+			
+			.menu{
+				width: 60%;
+				padding: 20px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: 5px;
+				text-align: center;
+				text-transform: capitalize;
+
+				li{
+					i{
+						margin: 0;
+					}
+
+					button{
+						padding: 3px 5px;
+						font-size: 1rem;
+					}
+
+					&:hover{
+						transform: scale(1.1);
+						color: wheat;
+					}
+				}
+			}
+		}
 	}
 
 	.side-menu{
-		padding-left: 10px;
-		padding-right: 15px;
-		background-color: $side-menu-bg-color;
-		height: 100vh;
 		position: fixed;
 		left: 0;
 		top: 0;
+		height: 100vh;
+		padding-left: 10px;
+		padding-right: 15px;
+		background-color: aqua;
 		text-align: center;
 		z-index: 100;
+		transform: translateX(-90%);
+    	transition: transform 0.3s ease-in-out;
 
 		li{
 			margin: 25px 0;
@@ -48,7 +175,7 @@ header{
 			i{
 				position: relative;
 				font-size: 30px;
-				color: #fff;
+				color: #183B4E;
 
 				span{
 					display: none;
@@ -71,6 +198,124 @@ header{
 			}
 
 			
+		}
+
+		&:hover{
+			background-color: $side-menu-bg-color;
+			transform: translateX(0);
+
+			i{
+				color: #fff;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 992px){
+    header{
+
+		.main-menu{
+			max-width: 750px;
+			
+			.menu-flex{
+				gap: 30px;
+
+				.logo{
+					h1{
+						font-size: 1.5rem;
+					}
+
+					p{
+						font-size: 0.8rem;
+					}
+				}
+				
+				.menu{
+					padding: 5px 0;
+
+					li{
+						font-size: 0.9rem;
+
+						button{
+							font-size: 0.7rem;
+						}
+					}
+				}
+			}
+		}
+
+		.side-menu{
+			padding-left: 5px;
+			padding-right: 10px;
+
+			li{
+				i{
+					font-size: 1.3rem;
+
+					span{
+						font-size: 8px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px){
+    header{
+
+		.main-menu{
+			max-width: 530px;
+
+			.menu-flex{
+				gap: 0px;
+
+				.logo-flex{
+					width: 50%;
+				}
+
+				.burger-btn{
+					display: block;
+				}
+				
+				.menu{
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 576px){
+	header{
+
+		.main-menu{
+			max-width: 450px;
+
+			.menu-flex{
+				.logo-flex{
+					width: 80%;
+
+					.logo-img{
+						img{
+							height: 3rem;
+						}
+					}
+				}
+
+				.menu{
+					width: 20%;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 480px){
+	header{
+
+		.main-menu{
+			max-width: 350px;
 		}
 	}
 }

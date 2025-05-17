@@ -1,10 +1,7 @@
 @import "variables";
 
 .experiences-banner{
-    padding: 200px 0;
-    background-image: $experiences-banner-img;
-    background-position: center;
-    background-size: cover;
+    @include page-banner-style($experiences-banner-img);
 
     .banner-text{
         h2{
@@ -14,12 +11,7 @@
 }
 
 .experiences-sec{
-    background-image: $experiences-bg-img;
-    // background-image: $experiences-banner-img;
-    background-color: rgba(0, 0, 0, 60%);
-    background-blend-mode: overlay;
-    background-position: center;
-    background-size: cover;
+    @include page-bg-style($experiences-bg-img);
 
     ul{
         list-style: disc;
@@ -73,9 +65,18 @@
             gap: 0;
 
             .info-text{
-                width: 60%;
+                width: 55%;
                 padding: 10px;
                 border-radius: 10px;
+
+                span{
+                    display: none;
+
+                    hr{
+                        margin: 10px 0;
+                    }
+                    
+                }
 
                 h4{
                     font-size: 14px;
@@ -86,7 +87,7 @@
             .education-info-text{
                 border: 3px solid #60B5FF;
                 background-color: #AFDDFF;
-                color: #102E50;
+                color: $dark-text-color;
 
                 h4{
                     color: #3A59D1;
@@ -104,13 +105,16 @@
             }
 
             .info-dot{
-                width: 10%;
+                width: 8%;
                 margin-top: 10px;
+                
+                z-index: 2;
 
                 img{
                     width: 40px;
                     height: auto;
                     border-radius: 40px;
+                    background-color: #000;
                 }
 
                 .education-dot{
@@ -124,7 +128,7 @@
             }
 
             .info-line{
-                width: 30%;
+                width: 37%;
 
                 hr{
                     width: 100%;
@@ -154,6 +158,63 @@
 
         .empty{
             width: 45%;
+        }
+    }
+}
+
+@media only screen and (max-width: $large-size){
+    .experiences-sec{
+
+        .titles-flex{
+            h3{
+                font-size: 25px;
+            }
+        }
+
+        .info-flex{
+            .info-container{
+                width: 50%;
+
+                .info-text{
+                    width: 100%;
+
+                    span{
+                        display: block;                        
+                    }
+                }
+
+                .info-dot{
+                    display: none;
+                }
+
+                .info-line{
+                    display: none;
+                }
+            }
+
+            .empty{
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $medium-size){
+    .experiences-sec{
+
+        .titles-flex{
+            display: none;
+        }
+
+        .info-flex{
+            flex-direction: column;
+            .info-container{
+                width: 100%;
+            }
+
+            .empty{
+                width: 0%;
+            }
         }
     }
 }

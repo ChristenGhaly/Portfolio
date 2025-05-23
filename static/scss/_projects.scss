@@ -56,17 +56,72 @@
                 box-shadow: 2px 2px 5px #fff;
 
                 img{
-                    height: 350px;
+                    height: 250px;
+                    width: 500px;
                 };
+
+                .project-info{
+                    display: none;
+                    width: 100%;
+                    height: 250px;
+                    padding: 30px;
+                    text-align: center;
+                    color: $dark-text-color;
+
+                    h4{
+                        padding: 5px;
+                        border-radius: 10px;
+                        box-shadow: 1px 1px 3px $dark-text-color;
+                        background-color: $dark-text-color;
+                        font-size: 1.5rem;
+                        color: #fff;
+                    }
+
+                    i{
+                        padding: 10px;
+                        background-color: $dark-text-color;
+                        border: 1px solid $dark-text-color;
+                        border-radius: 20px;
+                    }
+
+                    ul{
+                        list-style: disc;
+                        margin: 20px 0 20px 40px;
+                        text-align: left;
+                    }
+                }
+
+                .project-info-fe{
+                    background-color: #60B5FF;
+                }
+
+                .project-info-cms{
+                    background-color: #E69DB8;
+                }
+
+                .project-info-be{
+                    background-color: #8E7DBE;
+                }
 
                 &:hover{
                     transform: scale(1.1);
+                    // height: 100%;
+
+                    img{
+                        display: none;
+                    }
+
+                    .project-info{
+                        display: block;
+                    }
                 }
+
             }
         }
     }
 
     .projects-flex:nth-last-of-type(2){
+
         .colored-child{
             background-color: #E69DB8;
         }

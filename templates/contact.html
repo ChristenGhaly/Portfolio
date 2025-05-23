@@ -14,42 +14,56 @@
 <section class="contact-sec">
     <div class="container">
         <div class="contact-flex">
-            <div class="info-child">
-                <hr>
-                <h3><i class="fa-solid fa-phone"></i>(438) 885-8611</h3>
-                <hr>
-                <h3><a href="mailto: christen.srghaly@yahoo.com"><i class="fa-solid fa-envelope"></i>christen.srghaly@yahoo.com</a></h3>
-                <hr>
-                <h3><i class="fa-solid fa-map-location-dot"></i>Montreal, QC, Canada</h3>
-                <hr>
-                <h3><a href="https://www.linkedin.com/in/christen-ghaly/" target="_blank"><i class="fa-brands fa-linkedin"></i>Christen Ghaly</a></h3>
-                <hr>
+            <div class="map-child">
+                <div class="map" id="map"></div>
             </div>
 
             <div class="form-child">
-                <form method="POST" action="/contact">
+                <form method="POST" action="https://formspree.io/f/mjkgwnag">
                     <div>
-                        <label for="full-name">Full Name:</label>
-                        <input type="text" name="full-name" placeholder="Full Name" required>
+                        <label for="username-id">Full Name:</label>
+                        <input type="text" id="username-id" name="username" placeholder="Full Name" autocomplete="username" required>
                     </div>
 
                     <div>
-                        <label for="email">Email address:</label>
-                        <input type="email" name="email" placeholder="Email Address" required>
+                        <label for="email-id">Email address:</label>
+                        <input type="email" id="email-id" name="email" placeholder="Email Address" autocomplete="email" required>
                     </div>
 
                     <div>
-                        <label for="subject">Subject:</label>
-                        <input type="text" name="subject" placeholder="Subject" required>
+                        <label for="subject-id">Subject:</label>
+                        <input type="text" id="subject-id" name="subject" placeholder="Subject" autocomplete="off" required>
                     </div>
 
                     <div>
-                        <label for="message">Question / Comment:</label>
-                        <textarea name="message" placeholder="Your message" required></textarea>
+                        <label for="message-id">Question / Comment:</label>
+                        <textarea name="message" id="message-id" placeholder="Your message" autocomplete="off" required></textarea>
                     </div>
                     
                     <button type="submit">Send</button>
                 </form>
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <div class="info">
+                <i class="fa-solid fa-phone"></i>
+                <h3>(438) 885-8611</h3>
+            </div>
+
+            <div class="info">
+                <i class="fa-solid fa-envelope"></i>
+                <h3><a href="mailto: christen.srghaly@yahoo.com">christen.srghaly@yahoo.com</a></h3>
+            </div>
+
+            <div class="info">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <h3>Montreal, QC, Canada</h3>
+            </div>
+            
+            <div class="info">
+                <a href="https://www.linkedin.com/in/christen-ghaly/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <h3><a href="https://www.linkedin.com/in/christen-ghaly/" target="_blank">Christen Ghaly</a></h3>
             </div>
         </div>
     </div>

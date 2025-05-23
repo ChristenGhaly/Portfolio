@@ -1,4 +1,9 @@
+import { initMap } from "./map.js";
 import { setupBurgerMenu } from "./burgermenu.js";
+
+window.addEventListener('DOMContentLoaded', () => {
+  initMap();
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     setupBurgerMenu("burger-btn-id", "burger-menu-id", "burger-close-btn-id");

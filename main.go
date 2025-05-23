@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"html/template"
 	"net/http"
-	// "gopkg.in/gomail.v2"
 )
 
 type PageData struct {
@@ -30,34 +29,6 @@ func renderTemplate(w http.ResponseWriter, tmpl string, data PageData) {
 		fmt.Println("Execution error:", err)
 	}
 }
-
-// func sendEmail(w http.ResponseWriter, r *http.Request) {
-// 	if r.Method != http.MethodPost {
-//         http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
-//         return
-//     }
-
-// 	r.ParseForm()
-// 	name := r.FormValue("full-name")
-// 	email := r.FormValue("email")
-// 	subject := r.FormValue("subject")
-// 	message := r.FormValue("message")
-
-// 	msg := gomail.NewMessage()
-// 	msg.SetHeader("From", "christen.srghaly@yahoo.com")
-// 	msg.SetHeader("To", "christen.srghaly@yahoo.com")
-// 	msg.SetHeader("Subject", subject)
-// 	msg.SetBody("text/plain", fmt.Sprintf("From: %s <%s>\n\n%s", name, email, message))
-
-// 	d := gomail.NewDialer("smtp.gmail.com", 587, "christen.srghaly@yahoo.com", "your-password")
-
-// 	if err := d.DialAndSend(msg); err != nil {
-// 		http.Error(w, "Failed to send email: "+err.Error(), http.StatusInternalServerError)
-// 		return
-// 	}
-
-// 	w.Write([]byte("Message sent successfully!"))
-// }
 
 func main() {
 	fmt.Println("Server running at http://localhost:8080")

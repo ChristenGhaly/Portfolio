@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"html/template"
 	"net/http"
+	"log"
+	"os"
 )
 
 type PageData struct {
@@ -31,7 +33,12 @@ func renderTemplate(w http.ResponseWriter, tmpl string, data PageData) {
 }
 
 func main() {
-	fmt.Println("Server running at http://localhost:8080")
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080" // fallback for local testing
+	}
+
+	fmt.Printf("Server running at http://localhost:%s\n", port)
 
 	fs := http.FileServer(http.Dir("static"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
@@ -48,8 +55,9 @@ func main() {
 	
 	http.HandleFunc("/contact", func(w http.ResponseWriter, r *http.Request) { renderTemplate(w, "contact", PageData{Breadcrumb: []string{"Home", "Contact"}})})
 
-	err := http.ListenAndServe(":8080", nil)
+	err := http.ListenAndServe(":"+port, nil)
 	if err != nil {
+		log.Fatal(err)
 		fmt.Println("Server error:", err)
 	}
 }

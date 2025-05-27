@@ -9,15 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
     setupBurgerMenu("burger-btn-id", "burger-menu-id", "burger-close-btn-id");
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
     const links = document.querySelectorAll("a");
     const currentPage = window.location.pathname;
 
     links.forEach(link => {
-        if (link.href.includes(currentPage)) {
-            link.classList.add("active");
+        if (currentPage === "/") {
+            link.classList.toggle("active", link.href.endsWith("/"));
         } else {
-            link.classList.remove("active");
+            link.classList.toggle("active", link.href.includes(currentPage));
         }
     });
 });

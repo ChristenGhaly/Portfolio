@@ -10,10 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const links = document.querySelectorAll("a");
+    const links = document.querySelectorAll(".menu a, .burger-menu a");
     const currentPage = window.location.pathname;
 
     links.forEach(link => {
+        if (link.href.startsWith("https://www.linkedin.com")) return;
+        
         if (currentPage === "/") {
             link.classList.toggle("active", link.href.endsWith("/"));
         } else {

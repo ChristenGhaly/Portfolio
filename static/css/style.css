@@ -419,6 +419,13 @@ a {
   transition: 0.5s;
 }
 
+.active {
+  font-weight: 600;
+  color: #EAD196;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 button {
   padding: 0.5rem 3.5rem;
   border: 2px solid aqua;
@@ -2252,6 +2259,7 @@ img {
   position: relative;
   width: 100%;
   height: 100%;
+  z-index: 0 !important;
 }
 .contact-sec .contact-flex .form-child {
   -webkit-box-flex: 1.5;

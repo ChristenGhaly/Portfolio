@@ -35,6 +35,12 @@ a{
 	transition: 0.5s;
 }
 
+.active{
+	font-weight: 600;
+	color: $header-text-color;
+	transition: 0.5s;
+}
+
 button{
 	@include btn-style;
 }

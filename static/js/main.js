@@ -9,6 +9,19 @@ document.addEventListener('DOMContentLoaded', () => {
     setupBurgerMenu("burger-btn-id", "burger-menu-id", "burger-close-btn-id");
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll("a");
+    const currentPage = window.location.pathname;
+
+    links.forEach(link => {
+        if (link.href.includes(currentPage)) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
+});
+
 // Slick Slider [Tools]
 $('.tools-flex').slick({
     autoplay: true,

@@ -2144,7 +2144,7 @@ img {
     width: 100%;
   }
   .experiences-sec .info-flex .empty {
-    width: 0%;
+    display: none;
   }
 }
 @keyframes change-bg-anim {

@@ -1,6 +1,7 @@
 function initNavbar() {
+    const header = document.getElementById('header');
+    
     window.onscroll = function(){
-        var header = document.getElementById('header');
         if (window.pageYOffset > 100) {
             header.style.background = 'linear-gradient(to bottom, #000, #1A1A19)';
         } else {

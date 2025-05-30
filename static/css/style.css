@@ -501,7 +501,7 @@ img {
   margin: auto;
   max-width: 100%;
   display: block;
-  height: 300px;
+  height: auto;
 }
 
 @keyframes change-bg-anim {
@@ -1996,6 +1996,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 0px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -2017,6 +2019,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 0px;
   margin-bottom: 50px;
 }
@@ -2028,6 +2032,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 0;
 }
 .experiences-sec .info-flex .info-container .info-text {

@@ -45,6 +45,10 @@ button{
 	@include btn-style;
 }
 
+.go-to-top{
+	@include gotoup-btn-style;
+}
+
 img{
 	margin: auto;
 	max-width: 100%;

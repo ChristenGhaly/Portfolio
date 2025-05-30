@@ -1,5 +1,6 @@
 import { initMap } from "./map.js";
 import { setupBurgerMenu } from "./burgermenu.js";
+import { goToTop } from "./gototop.js";
 
 window.addEventListener('DOMContentLoaded', () => {
   initMap();
@@ -22,6 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
             link.classList.toggle("active", link.href.includes(currentPage));
         }
     });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    goToTop();
 });
 
 // Slick Slider [Tools]

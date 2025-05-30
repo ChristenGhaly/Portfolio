@@ -3,18 +3,18 @@
 // Colors
 $page-bg-color: #000;
 $header-bg-color: rgb(61, 54, 92);
-$header-text-color: #EAD196;
+$header-text-color: #FFDDAB;
 $side-menu-bg-color: #333;
+$main-color: aqua;
 
 $text-color: #fff;
 $dark-text-color: #183B4E;
-$text-hover-color: #F3C623;
+$text-hover-color: #FFDDAB;
 
 $cards-bg-color: #FAF8F1;
 
-$footer-bgcolor: #EAD196;
+$footer-bgcolor: #FFDDAB;
 $footer-text-color: #000;
-// $hr-color: #FAF8F1;
 
 // Fonts
 $main-font: "Raleway", sans-serif;
@@ -109,6 +109,38 @@ $large-size: 992px;
 		padding: 0.3rem 1rem;
         border-radius: 0.3rem;
         font-size: 0.8rem;
+	}
+}
+
+@mixin gotoup-btn-style{
+    all: unset;
+    display: none;
+    position: fixed;
+    bottom: 12%;
+    right: 1%;
+    box-shadow: none;
+    background-color: transparent;
+    z-index: 100;
+
+    i{
+        margin: 0;
+        padding: 0;
+        font-size: 3rem;
+        border-radius: 3rem;
+        border: 1px solid $main-color;
+        background-color: $main-color;
+	    color: $header-bg-color;
+        
+        &:hover{
+            background-color: $header-bg-color;
+            color: $main-color;
+        }
+    }
+
+    &:hover{
+		box-shadow: none;
+		background-color: transparent;
+        border: 0;
 	}
 }
 

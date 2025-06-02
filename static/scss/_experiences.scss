@@ -61,7 +61,7 @@
         }
 
         .info-container{
-            width: 60%;
+            width: 62%;
             display: flex;
             flex-wrap: wrap;
             gap: 0;
@@ -107,7 +107,7 @@
             }
 
             .info-dot{
-                width: 10%;
+                width: 7%;
                 margin-top: 10px;
                 
                 z-index: 2;
@@ -130,7 +130,7 @@
             }
 
             .info-line{
-                width: 25%;
+                width: 28%;
 
                 hr{
                     width: 100%;
@@ -159,7 +159,7 @@
         }
 
         .empty{
-            width: 40%;
+            width: 38%;
         }
     }
 }

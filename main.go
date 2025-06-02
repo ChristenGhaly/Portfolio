@@ -35,10 +35,10 @@ func renderTemplate(w http.ResponseWriter, tmpl string, data PageData) {
 func main() {
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "8080" // fallback for local testing
+		port = "8080"
 	}
 
-	fmt.Printf("Server running at http://localhost:%s\n", port)
+	fmt.Printf("Server running on port %s\n", port)
 
 	fs := http.FileServer(http.Dir("static"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))

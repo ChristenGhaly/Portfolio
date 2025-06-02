@@ -55,7 +55,7 @@ func main() {
 	
 	http.HandleFunc("/contact", func(w http.ResponseWriter, r *http.Request) { renderTemplate(w, "contact", PageData{Breadcrumb: []string{"Home", "Contact"}})})
 
-	err := http.ListenAndServe(":"+port, nil)
+	err := http.ListenAndServe("0.0.0.0:"+port, nil)
 	if err != nil {
 		log.Fatal(err)
 		fmt.Println("Server error:", err)

@@ -2139,6 +2139,8 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .experiences-sec .info-flex .info-container {
     width: 100%;

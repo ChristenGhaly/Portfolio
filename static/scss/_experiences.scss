@@ -210,6 +210,8 @@
 
         .info-flex{
             flex-direction: column;
+            flex-wrap: wrap;
+            
             .info-container{
                 width: 100%;
             }

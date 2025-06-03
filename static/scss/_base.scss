@@ -13,6 +13,10 @@
 }
 
 // General CSS
+html{
+	overflow-x: hidden;
+}
+
 body{
 	background: $page-bg-color;
 	font-family: $main-font;

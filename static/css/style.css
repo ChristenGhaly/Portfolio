@@ -504,6 +504,119 @@ img {
   height: auto;
 }
 
+.info-box {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  padding: 2rem 5rem;
+  z-index: 20000;
+  overflow-y: scroll;
+}
+.info-box button {
+  all: unset;
+  margin-left: 95%;
+  opacity: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.info-box button i {
+  border: 3px solid wheat;
+  border-radius: 2rem;
+  background-color: wheat;
+  font-size: 2.5rem;
+  color: #8E1616;
+}
+.info-box .info-container {
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 50px;
+  width: 90%;
+  background-color: #fff;
+  border-radius: 2rem;
+  color: #000;
+}
+.info-box .info-container div {
+  margin: 2rem 0;
+}
+.info-box .info-container h3 {
+  margin-bottom: 1rem;
+  color: #8E1616;
+}
+.info-box .info-container h3 i {
+  margin-right: 1rem;
+}
+.info-box .info-container ul {
+  list-style: disc;
+  margin-left: 5rem;
+}
+.info-box .info-container ul li {
+  margin-bottom: 0.5rem;
+}
+.info-box .info-container p {
+  margin-left: 2.5rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 992px) {
+  .info-box {
+    padding: 3rem;
+  }
+  .info-box .info-container {
+    padding: 1rem 2rem;
+    width: 95%;
+  }
+  .info-box .info-container ul {
+    margin-left: 3.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .info-box {
+    padding: 2rem;
+  }
+  .info-box button {
+    margin-left: 90%;
+  }
+  .info-box .info-container {
+    width: 95%;
+    border-radius: 1rem;
+  }
+  .info-box .info-container h3 {
+    margin-bottom: 0.7rem;
+  }
+  .info-box .info-container h3 i {
+    margin-right: 0.5rem;
+  }
+  .info-box .info-container ul {
+    margin-left: 3rem;
+  }
+  .info-box .info-container p {
+    margin-left: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .info-box {
+    padding: 1rem;
+  }
+  .info-box button {
+    margin-left: 85%;
+  }
+  .info-box .info-container {
+    padding: 0.1rem 1rem;
+  }
+  .info-box .info-container h3 {
+    font-size: 1.1rem;
+  }
+  .info-box .info-container ul {
+    margin-left: 2.7rem;
+  }
+  .info-box .info-container p {
+    margin-left: 1.8rem;
+  }
+}
+
 @keyframes change-bg-anim {
   0% {
     background-image: url("/static/img/index/cta-bg.webp");

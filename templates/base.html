@@ -59,6 +59,81 @@
 
     {{block "content" .}}{{end}}
 
+    <div class="info-box" id="info-box">
+        <button id="close-btn-info">
+            <i class="fa-solid fa-circle-xmark"></i>
+        </button>
+
+        <div class="info-container">
+            <div>
+                <h3><i class="fa-solid fa-screwdriver-wrench"></i>Tools & Technologies Used</h3>
+
+                <ul>
+                    <li>HTML5 – For the basic structure of all pages.</li>
+
+                    <li>SCSS (SASS) – To write clean, modular, and maintainable styles with nesting, mixins and variables.</li>
+
+                    <li>JavaScript – For interactivity, and dynamic behaviors.</li>
+
+                    <li>AOS (Animate On Scroll) – To enhance the user experience with subtle entry animations.</li>
+
+                    <li>Go (Golang) Templates – Used for backend templating logic and serving dynamic HTML pages.</li>
+
+                    <li>Git & GitHub – For version control.</li>
+
+                    <li>Render – To deploy and host the backend server for the live portfolio.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3><i class="fa-solid fa-bullseye"></i> Purpose of This Project</h3>
+
+                <p>This portfolio was built to present my skills as a full-stack web designer and developer. It serves as both a personal showcase and a real-world demonstration of my ability to:</p>
+
+                <ul>
+                    <li>Build responsive web layouts.</li>
+
+                    <li>Present my resume and contact information.</li>
+
+                    <li>Demonstrate both front-end and back-end abilities.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3><i class="fa-solid fa-key"></i> Key Features
+                </h3>
+
+                <ul>
+                    <li>Mobile-first design that works smoothly on all devices.</li>
+                    
+                    <li>Scroll-triggered animations for better visual engagement.</li>
+
+                    <li>Contact form to allow users to reach out.</li>
+
+                    <li>Reusable SCSS components for maintainable and scalable styles.</li>
+
+                    <li>Code structure that separates concerns and follows clean, semantic practices.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3><i class="fa-solid fa-brain"></i> What I Learned</h3>
+                
+                <ul>
+                    <li>How to debug tricky layout issues like horizontal overflow and responsiveness.</li>
+
+                    <li>The importance of component structure and using SCSS variables and mixins efficiently.</li>
+
+                    <li>Integrating JavaScript libraries and managing third-party dependencies.</li>
+
+                    <li>Using Go’s html/template package for rendering content safely and efficiently.</li>
+
+                    <li>How to deploy a full-stack app on Render.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <button class="go-to-top" id="go-to-top" title="Go to top"><i class="fa-solid fa-circle-up"></i></button>
 
     {{template "footer"}}

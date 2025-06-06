@@ -1,13 +1,10 @@
 import { initMap } from "./map.js";
 import { setupBurgerMenu } from "./burgermenu.js";
 import { goToTop } from "./gototop.js";
+import { displayInfo } from "./header.js";
 
 window.addEventListener('DOMContentLoaded', () => {
   initMap();
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    setupBurgerMenu("burger-btn-id", "burger-menu-id", "burger-close-btn-id");
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -23,10 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
             link.classList.toggle("active", link.href.includes(currentPage));
         }
     });
-});
 
-document.addEventListener('DOMContentLoaded', () => {
+    setupBurgerMenu("burger-btn-id", "burger-menu-id", "burger-close-btn-id");
     goToTop();
+    displayInfo();
 });
 
 // Slick Slider [Tools]

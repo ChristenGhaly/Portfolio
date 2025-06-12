@@ -1,7 +1,7 @@
 import { initMap } from "./map.js";
 import { setupBurgerMenu } from "./burgermenu.js";
 import { goToTop } from "./gototop.js";
-import { displayInfo } from "./header.js";
+import { displayInfo } from "./popupinfo.js";
 
 window.addEventListener('DOMContentLoaded', () => {
   initMap();

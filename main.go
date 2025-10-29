@@ -45,7 +45,6 @@ type Url struct {
 	Priority   float32 `xml:"priority"`
 }
 
-// Sitemap handler
 func sitemapHandler(w http.ResponseWriter, r *http.Request) {
 	urls := []Url{
 		{Loc: "https://christenghalyportfolio.onrender.com/", Changefreq: "monthly", Priority: 1.0},

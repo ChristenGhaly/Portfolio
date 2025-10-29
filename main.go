@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/xml"
 	"fmt"
 	"html/template"
 	"net/http"
@@ -32,6 +33,38 @@ func renderTemplate(w http.ResponseWriter, tmpl string, data PageData) {
 	}
 }
 
+type UrlSet struct {
+	XMLName xml.Name `xml:"urlset"`
+	Xmlns   string   `xml:"xmlns,attr"`
+	Urls    []Url    `xml:"url"`
+}
+
+type Url struct {
+	Loc        string  `xml:"loc"`
+	Changefreq string  `xml:"changefreq"`
+	Priority   float32 `xml:"priority"`
+}
+
+// Sitemap handler
+func sitemapHandler(w http.ResponseWriter, r *http.Request) {
+	urls := []Url{
+		{Loc: "https://christenghalyportfolio.onrender.com/", Changefreq: "monthly", Priority: 1.0},
+		{Loc: "https://christenghalyportfolio.onrender.com/about", Changefreq: "monthly", Priority: 0.8},
+		{Loc: "https://christenghalyportfolio.onrender.com/projects", Changefreq: "monthly", Priority: 0.8},
+		{Loc: "https://christenghalyportfolio.onrender.com/skills", Changefreq: "monthly", Priority: 0.7},
+		{Loc: "https://christenghalyportfolio.onrender.com/experiences", Changefreq: "monthly", Priority: 0.7},
+		{Loc: "https://christenghalyportfolio.onrender.com/contact", Changefreq: "monthly", Priority: 0.7},
+	}
+
+	urlSet := UrlSet{
+		Xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9",
+		Urls:  urls,
+	}
+
+	w.Header().Set("Content-Type", "application/xml")
+	xml.NewEncoder(w).Encode(urlSet)
+}
+
 func main() {
 	port := os.Getenv("PORT")
 	if port == "" {
@@ -54,6 +87,8 @@ func main() {
 	http.HandleFunc("/experiences", func(w http.ResponseWriter, r *http.Request) { renderTemplate(w, "experiences", PageData{Breadcrumb: []string{"Home", "Experiences"}})})
 	
 	http.HandleFunc("/contact", func(w http.ResponseWriter, r *http.Request) { renderTemplate(w, "contact", PageData{Breadcrumb: []string{"Home", "Contact"}})})
+
+	http.HandleFunc("/sitemap.xml", sitemapHandler)
 
 	err := http.ListenAndServe("0.0.0.0:"+port, nil)
 	if err != nil {

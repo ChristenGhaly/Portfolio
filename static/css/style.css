@@ -1699,6 +1699,12 @@ img {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 30px;
   }
+  .projects-sec .projects-flex .projects-grid .project .project-info h4, .projects-sec .projects-flex .projects-grid .project .project-info ul {
+    font-size: 1rem;
+  }
+  .projects-sec .projects-flex .projects-grid .project .project-info i {
+    font-size: 0.8rem;
+  }
   .projects-sec .projects-flex .projects-grid .project img {
     height: 250px;
   }
